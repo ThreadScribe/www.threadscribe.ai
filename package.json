@@ -1,0 +1,12 @@
+{
+  "name": "www.threadscribe.ai",
+  "license": "MIT",
+  "version": "0.0.1",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
