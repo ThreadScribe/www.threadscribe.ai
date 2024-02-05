@@ -3,7 +3,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d src --nojekyll --cname www.threadscribe.ai"
   },
   "dependencies": {},
   "devDependencies": {
