@@ -67,3 +67,16 @@ p {
   background: url('../img/slack.jpg') no-repeat center center;
   background-size: cover;
 }
+
+.phone-image-container {
+  height: 400px; 
+  overflow:hidden;
+  position: relative;
+  text-align: center;
+}
+
+.phone-image {
+  object-fit: cover;
+  width: 80%;
+  /* height: 100%; */
+}
