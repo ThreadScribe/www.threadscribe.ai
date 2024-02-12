@@ -1,0 +1,61 @@
+---
+import Nav from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+import ThreadScribeIcon from '../images/threadscribe_512.png';
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ThreadScribe.ai</title>
+  <meta
+    content="ThreadScribe.ai is a powereful AI-powered chatbot for Slack designed to transform your Slack conversations into a structured, easily searchable knowledge base."
+    name="description">
+  <meta content="threadscribe, slack, ai" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/favicon.ico" rel="icon">
+  <link href={ThreadScribeIcon.src} rel="apple-touch-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="/css/styles.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDC5PBCFNJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XDC5PBCFNJ');
+  </script>
+</head>
+
+<body>
+  <Nav />
+
+  <slot />
+
+  <Footer />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> -->
+  <script is:inline src="/js/scripts.js"></script>
+</body>
+
+</html>
+

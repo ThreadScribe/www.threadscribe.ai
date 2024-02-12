@@ -1,12 +1,17 @@
 {
   "name": "www.threadscribe.ai",
-  "license": "MIT",
+  "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "deploy": "gh-pages -d src --nojekyll --cname www.threadscribe.ai"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
+  "dependencies": {
+    "astro": "^4.3.6",
+    "@astrojs/check": "^0.5.3",
+    "typescript": "^5.3.3"
   }
 }

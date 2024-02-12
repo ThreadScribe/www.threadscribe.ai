@@ -21,6 +21,7 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -39,20 +40,15 @@ p {
   font-size: 1.5rem;
 }
 
-.big-button {
-  font-size: 2rem;
-  padding: 10px 25px;
-}
-
 .number-circle {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background-color: #0d6efd;
   color: white;
-  line-height: 6rem;
-  font-size: 4rem;
+  line-height: 5rem;
+  font-size: 3rem;
   margin: auto;
 }
 
@@ -70,4 +66,17 @@ p {
 .background-image-column {
   background: url('../img/slack.jpg') no-repeat center center;
   background-size: cover;
+}
+
+.phone-image-container {
+  height: 400px; 
+  overflow:hidden;
+  position: relative;
+  text-align: center;
+}
+
+.phone-image {
+  object-fit: cover;
+  width: 80%;
+  /* height: 100%; */
 }
