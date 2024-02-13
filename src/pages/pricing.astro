@@ -1,0 +1,240 @@
+---
+import SiteLayout from "../layouts/default.astro";
+
+import { config } from "../config";
+---
+
+<style>
+  section.pricing {
+    background: #007bff;
+    background: linear-gradient(to right, #0062e6, #33aeff);
+  }
+
+  .pricing .card {
+    border: none;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .pricing hr {
+    margin: 1.5rem 0;
+  }
+
+  .pricing .card-title {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+  }
+
+  .pricing .card-subtitle {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+  }
+
+  .pricing .card-price {
+    font-size: 2.25rem;
+    margin: 0;
+  }
+
+  .pricing .card-price .period {
+    /* font-size: 0.8rem; */
+  }
+
+  .pricing ul li {
+    margin-bottom: 1rem;
+  }
+
+  .pricing .text-muted {
+    opacity: 0.7;
+  }
+
+  /* .pricing .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+  } */
+
+  /* Hover Effects on Card */
+
+  @media (min-width: 992px) {
+    .pricing .card:hover {
+      margin-top: -0.25rem;
+      margin-bottom: 0.25rem;
+      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .pricing .card:hover .btn {
+      opacity: 1;
+    }
+  }
+</style>
+
+<SiteLayout>
+  <section class="pricing py-5">
+    <div class="container text-white py-4">
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="fw-bold mb-4">Transparent Pricing for Every Team</h1>
+        <p class="fs-5">
+          Choose the perfect ThreadScribe plan that fits your team's needs.
+          Simple, straightforward pricing to help you transform your Slack
+          workspace into a productive powerhouse.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <div class="row">
+            <!-- Free Tier -->
+            <div class="col-12 col-md-6">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Essential
+                  </h5>
+                  <h6 class="card-price text-center">$0</h6>
+                  <h5 class="card-subtitle text-muted text-center">FREE</h5>
+                  <hr />
+                  <p class="fs-5 fw-bold">All accounts include:</p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Unlimited Thread Summaries
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Basic Search Functionality
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Web and Mobile Access to ThreadScribe.ai
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Integration with Slack
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Help Center & Email Support
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <script
+                      async
+                      data-uid="edfdf5fa4b"
+                      src="https://threadscribeai.ck.page/edfdf5fa4b/index.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Business Tier -->
+            <div class="col-12 col-md-6">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Business
+                  </h5>
+                  <h6 class="card-price text-center">
+                    <del
+                      >$15<span class="period text-secondary">
+                        /user/month</span
+                      ></del
+                    >
+                  </h6>
+                  <h5 class="card-subtitle text-muted text-center">
+                    FREE during Beta!
+                  </h5>
+                  <hr />
+                  <p class="fs-5 fw-bold">Includes everything in Essential plus:</p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Automated Channel Digests
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Scheduled channel summaries
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Intelligent Keyword Notifications
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Sophisticated Access Controls
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Premium Support & Dedicated Onboarding
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <script
+                      async
+                      data-uid="7f347c94e6"
+                      src="https://threadscribeai.ck.page/7f347c94e6/index.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Enterprise Tier -->
+            <div class="col-12 my-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Enterprise
+                  </h5>
+                  <h6 class="card-price text-center">Custom Pricing</h6>
+                  <h5 class="card-subtitle text-muted text-center">
+                    Get in touch!
+                  </h5>
+                  <hr />
+                  <p class="fs-5 fw-bold">For organizations that want to leverage the power of AI at scale but need additional security, control, and support:</p>
+
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Real-time Channel & Thread Indexing
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Robust Data Segregation & Security
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Dedicated Hosting
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Service & Uptime Commitment
+                    </li>
+                    <li>
+                      <i class="bi bi-check"></i>
+                      Slack Enterprise Support & Integration
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <a href={config.bookingLink} class="btn btn-primary text-uppercase">Schedule a Call</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

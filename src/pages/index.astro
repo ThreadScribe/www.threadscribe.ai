@@ -7,10 +7,12 @@ import HowThreadScribeWorks1 from '../images/how_threadscribe_works_1.png';
 import HowThreadScribeWorks3 from '../images/how_threadscribe_works_3.png';
 import SlackWithNotifications from '../images/slack_with_notifications.png';
 
+import { config } from '../config';
+
 ---
 <SiteLayout>
 	<div class="container py-5">
-    <div class="row flex-md-row-reverse align-items-center g-5 pb-5" data-aos="fade-right" data-aos-delay="100">
+    <div class="row flex-md-row-reverse align-items-center g-5 pb-5">
       <div class="col-sm-12 col-md-6">
         <div class="ratio ratio-16x9">
           <iframe src="https://www.youtube.com/embed/PmNE2cscfHc?si=3G8GMVIg9VhPBKyP" title="ThreadScribe.ai Promo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -24,17 +26,17 @@ import SlackWithNotifications from '../images/slack_with_notifications.png';
           into a structured, easily searchable knowledge base.
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="https://bot.threadscribe.ai/slack/install" role="button" class="btn btn-primary btn-lg px-4 gap-3">
+          <a href={config.threadScribe.installLink} role="button" class="btn btn-primary btn-lg px-4 gap-3">
             <i class="bi bi-slack"></i> <span>Add to Slack</span>
           </a>
-          <a href="https://app.threadscribe.ai/" role="button" class="btn btn-outline-secondary btn-lg px-4">App Login</a>
+          <a href={config.threadScribe.appHome} role="button" class="btn btn-outline-secondary btn-lg px-4">App Login</a>
           </div>
       </div>
     </div>
   </div>
 
   <section class="features bg-primary">
-    <div class="container text-white py-5" data-aos="fade-right" data-aos-delay="100">
+    <div class="container text-white py-5">
       <div class="row">
         <div class="col-md-4 d-flex align-items-start">
           <div class="icon-container me-3">
@@ -84,7 +86,7 @@ import SlackWithNotifications from '../images/slack_with_notifications.png';
         <div class="col-md-6">
           <h2 class="mt-4">Find the signal through the noise with ThreaScribe.ai</h2>
           <p class="my-2">Automatically extract and synthesize your corporate knowledge</p>
-          <a href="https://bot.threadscribe.ai/slack/install" class="btn btn-primary btn-lg mt-3" role="button">
+          <a href={config.threadScribe.installLink} class="btn btn-primary btn-lg mt-3" role="button">
             <i class="bi bi-slack"></i> Add to Slack
           </a>
         </div>
@@ -145,7 +147,7 @@ import SlackWithNotifications from '../images/slack_with_notifications.png';
         <div class="col-md-6 px-5">
           <h2 class="mb-2">Feeling Overwhelmed by Slack Notifications?</h2>
           <p class="my-2">ThreadScribe.ai uses AI to automatically summarize your slack threads into easily digestible knowledge base articles.</p>
-          <a href="https://bot.threadscribe.ai/slack/install" class="btn btn-light btn-lg mt-3" role="button">
+          <a href={config.threadScribe.installLink} class="btn btn-light btn-lg mt-3" role="button">
             <i class="bi bi-slack"></i> Add to Slack
           </a>
         </div>
@@ -153,12 +155,4 @@ import SlackWithNotifications from '../images/slack_with_notifications.png';
     </div>
   </section>
 
-  <div class="container py-4" data-aos="fade-right" data-aos-delay="100">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h3 class="text-center">Subscribe to updates</h3>
-        <script async data-uid="cf1a2e6f1e" src="https://threadscribeai.ck.page/cf1a2e6f1e/index.js"></script>
-      </div>
-    </div>
-  </div>
 </SiteLayout>

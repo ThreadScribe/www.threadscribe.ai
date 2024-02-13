@@ -1,38 +1,60 @@
 ---
 import Logo from '../images/threadscribe_logo.png';
 
+import { config } from '../config';
+
 ---
 
+
 <div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <img src={Logo.src} width="24" height="24" />
-      </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 ThreadScribe.ai</span>
+  <footer class="pt-5">
+    <div class="row">
+      <div class="col-12 col-md-3 align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <img src={Logo.src} width="24" height="24" />
+        </a>
+        <span class="mb-3 mb-md-0 fw-bold text-body-secondary">ThreadScribe.ai</span>
+
+        <p class="fs-6 fw-lighter my-4 text-muted">Transform Slack Chatter into Actionable Insights.</p>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="/pricing" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="/careers" class="nav-link p-0 text-body-secondary">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href={config.threadScribe.installLink} class="nav-link p-0 text-body-secondary">Install</a></li>
+          <li class="nav-item mb-2"><a href={config.threadScribe.appHome} class="nav-link p-0 text-body-secondary">Login</a></li>
+          <li class="nav-item mb-2"><a href={config.threadScribe.slack} class="nav-link p-0 text-body-secondary">Slack</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-5 mb-3">
+        <form>
+          <h5>Subscribe</h5>
+          <script async data-uid="cf1a2e6f1e" src="https://threadscribeai.ck.page/cf1a2e6f1e/index.js"></script>
+        </form>
+      </div>
     </div>
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3">
-        <a class="text-body-secondary" href="https://www.twitter.com/threadscribeai">
-          <i class="bi bi-twitter"></i>
-        </a>
-      </li>
-      <li class="ms-3">
-        <a class="text-body-secondary" href="https://www.facebook.com/threadscribeai">
-          <i class="bi bi-facebook"></i>
-        </a>
-      </li>
-      <!-- <li class="ms-3">
-        <a class="text-body-secondary" href="#">
-          <i class="bi bi-instagram"></i>
-        </a>
-      </li> -->
-      <li class="ms-3">
-        <a class="text-body-secondary" href="https://www.linkedin.com/company/threadscribeai">
-          <i class="bi bi-linkedin"></i>
-        </a>
-      </li>
-    </ul>
+    <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+      <p class="fs-6 text-muted">&copy; 2024 ThreadScribe.ai | All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href={config.social.linkedIn}><i class="bi bi-linkedin"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href={config.social.facebook}><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href={config.social.twitter}><i class="bi bi-twitter"></i></a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </div>

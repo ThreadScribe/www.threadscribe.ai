@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../layouts/default.astro";
+---
+
+<style>
+  .careers-header {
+    text-align: center;
+  }
+  .no-jobs-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    color: #6c757d;
+    border-radius: .5rem;
+  }
+</style>
+
+<SiteLayout>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="careers-header">
+          <h1>Careers at ThreadScribe.ai</h1>
+          <p>Join our team and help shape the future of workplace communication!</p>
+        </div>
+        <!-- Placeholder for when there are no job listings -->
+        <div class="no-jobs-message">
+          <p class="">There are currently no open positions, but we're always on the lookout for talented individuals. Feel free to send us your resume, and we'll reach out when a suitable position opens up!</p>
+          <p><a href="mailto:hello@threadscribe.ai">hello@threadscribe.ai</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</SiteLayout>
