@@ -1,0 +1,32 @@
+---
+import SiteLayout from "../layouts/default.astro";
+
+import { config } from "../config";
+---
+
+<style>
+  .support {
+    margin-top: 200px;
+    margin-bottom: 300px;
+  }
+  @media (max-width: 992px) {
+    .support {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+</style>
+<SiteLayout>
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 support text-center">
+        <h1>Click the button below to add ThreadScribe to Slack</h1>
+        <a
+          href={config.threadScribe.installLink}
+          class="btn btn-primary btn-lg mt-4"
+          ><i class="bi bi-download"></i> Add to Slack</a
+        >
+      </div>
+    </div>
+  </div>
+</SiteLayout>
