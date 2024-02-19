@@ -1,3 +1,2 @@
-User-agent: * 
-Disallow: /thank-you-linkedin
-Disallow: /thank-you
+User-agent: *
+Disallow:
