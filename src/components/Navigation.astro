@@ -1,15 +1,18 @@
 ---
 import { config } from '../config';
-import Logo from '../images/threadscribe_logo.png';
+import Logo from '../images/threadscribe_logo_64.jpg';
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand fw-bold" href="https://www.threadscribe.ai">
-      <img src={Logo.src} alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-      ThreadScribe.ai
+      <span class="brand-logo">
+        <img src={Logo.src} alt="Logo" class="d-inline-block align-text-top pr-5 img-circle img-thumbnail">
+        <span class="ps-3 d-none d-md-block">ThreadScribe.ai</span>
+      </span>
+      
     </a>
 
     <button class="navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

@@ -2,7 +2,7 @@
 import Nav from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-import ThreadScribeIcon from '../images/threadscribe_512.png';
+import ThreadScribeIcon from '../images/threadscribe_logo_512.jpg';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@ import ThreadScribeIcon from '../images/threadscribe_512.png';
   <meta content="threadscribe, slack, ai" name="keywords">
 
   <!-- Favicons -->
-  <link href="/favicon.ico" rel="icon">
+  <link href="/threadscribe_logo_64.jpg" rel="icon">
   <link href={ThreadScribeIcon.src} rel="apple-touch-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,10 +26,6 @@ import ThreadScribeIcon from '../images/threadscribe_512.png';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
   <link href="/css/styles.css" rel="stylesheet">
 
   <!-- Google Tag Manager -->
@@ -46,6 +42,7 @@ import ThreadScribeIcon from '../images/threadscribe_512.png';
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W46VHD5B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   <Nav />
 
   <slot />

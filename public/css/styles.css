@@ -1,16 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   display: flex;
-    min-height: 100vh;
+  min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.background-green {
+  background: rgb(0, 198, 131);
+  background: linear-gradient(0deg, rgba(0, 198, 131, 1) 0%, rgba(78, 232, 176, 1) 100%);
+}
+
+.background-blue {
+  background: rgb(32, 127, 235);
+  background: linear-gradient(0deg, rgba(32, 127, 235, 1) 0%, rgba(52, 157, 249, 1) 100%);
+
+  color: white;
+}
+
+.background-blue-dark {
+  background: #1B6AC9;
+  color: white;
+}
+
+.background-dark {
+  background: #333333;
+  color: white;
+}
+
+.background-light {
+  background: #F5F5F5
+}
+
+.background-blue h1 {
+  color: white;
+}
+
+/* .navbar {
+  background: rgb(0, 198, 131);
+  background: linear-gradient(0deg, rgba(0, 198, 131, 1) 0%, rgba(78, 232, 176, 1) 100%);
+} */
+
+.navbar .navbar-brand img {
+  height: 30px;
+  width: 30px;
+}
+
+.navbar .navbar-brand .brand-logo {
+  align-items: center;
+  display: flex;
+}
 .feature-icon {
   width: 4rem;
   height: 4rem;
   border-radius: .75rem;
 }
+
 
 .cta {
   height: 300px;
@@ -20,7 +77,8 @@ body {
 .features p {
   font-size: 1rem;
 }
- 
+
+/*  
 h1,
 h2,
 h3 {
@@ -32,6 +90,7 @@ h1 {
   font-size: 3rem;
 }
 
+*/
 h2 {
   font-size: 2.5rem;
 }
@@ -67,20 +126,124 @@ p {
   }
 }
 
-.background-image-column {
-  background: url('../img/slack.jpg') no-repeat center center;
-  background-size: cover;
+.btn-custom-green {
+  background-color: #2ED29B;
+  border-color: #2ED29B;
+  color: #ffffff;
+  /* Ensures text color is white for contrast */
 }
 
-.phone-image-container {
-  height: 400px; 
-  overflow:hidden;
-  position: relative;
-  text-align: center;
+.btn-custom-green:hover,
+.btn-custom-green:focus {
+  background-color: #26c589;
+  /* Slightly darker shade for hover state */
+  border-color: #24b780;
+  color: #ffffff;
+  /* Keeps text color white on hover/focus */
 }
 
-.phone-image {
-  object-fit: cover;
-  width: 80%;
-  /* height: 100%; */
+.btn-custom-green:active {
+  background-color: #1db072;
+  /* Even darker for the active state */
+  border-color: #1aa66b;
+  box-shadow: none;
+  /* Optional: removes the box-shadow on click */
+}
+
+.btn-custom-green.disabled,
+.btn-custom-green:disabled {
+  background-color: #2ED29B;
+  border-color: #2ED29B;
+  opacity: 0.65;
+  /* Slightly faded look for disabled state */
+}
+
+.btn-vibrant-pink {
+  background-color: #E84E99;
+  color: white;
+  /* This makes the text color white for better readability */
+  border: none;
+  /* Removes the border */
+  padding: 10px 20px;
+  /* Adds some padding around the text */
+  border-radius: 5px;
+  /* Rounds the corners of the button */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+}
+
+.btn-vibrant-pink:hover,
+.btn-vibrant-pink:focus {
+  background-color: #cf4370;
+  /* Slightly darker shade of pink for the hover state */
+}
+
+.btn-vibrant-pink:active {
+  background-color: #b73c62;
+  /* Even darker shade of pink for the active state */
+}
+
+.btn-vibrant-pink:disabled {
+  background-color: #E84E99;
+  opacity: 0.5;
+  /* Makes the button look disabled */
+  cursor: not-allowed;
+  /* Changes cursor to not-allowed on disabled state */
+}
+
+.btn-vibrant-orange {
+  background-color: #EB9C20;
+  color: white;
+  /* This makes the text color white for better readability */
+  border: none;
+  /* Removes the border */
+  padding: 10px 20px;
+  /* Adds some padding around the text */
+  border-radius: 5px;
+  /* Rounds the corners of the button */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+}
+
+.btn-vibrant-orange:hover,
+.btn-vibrant-orange:focus {
+  background-color: #d48a1d;
+  /* Slightly darker shade of orange for the hover state */
+}
+
+.btn-vibrant-orange:active {
+  background-color: #bf7a1a;
+  /* Even darker shade of orange for the active state */
+}
+
+.btn-vibrant-orange:disabled {
+  background-color: #EB9C20;
+  opacity: 0.5;
+  /* Makes the button look disabled */
+  cursor: not-allowed;
+  /* Changes cursor to not-allowed on disabled state */
+}
+
+.divider {
+  width: 100px;
+
+  border: none;
+  height: 3px;
+  background-color: #EB9C20;
+  margin: auto;
+}
+
+.btn-xl {
+  padding: 1.25rem 1.75rem;
+  font-size: 2rem;
+}
+
+.featured-in-logos img {
+  max-width: 100px;
+  /* Adjust size as needed */
+  margin: 0 15px;
 }

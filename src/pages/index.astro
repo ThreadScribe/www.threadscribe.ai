@@ -8,117 +8,47 @@ import HowThreadScribeWorks3 from '../images/how_threadscribe_works_3.png';
 import SlackWithNotifications from '../images/slack_with_notifications.png';
 
 import { config } from '../config';
+import Navigation from '../components/Navigation.astro';
 
 ---
+
 <SiteLayout>
-	<div class="container py-5">
-    <div class="row flex-md-row-reverse align-items-center g-5 pb-5">
-      <div class="col-sm-12 col-md-6">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/PmNE2cscfHc?si=3G8GMVIg9VhPBKyP" title="ThreadScribe.ai Promo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-          Turn Your Threads into Insights with Our AI-Powered Chatbot</h1>
-        <p class="lead my-4">
-          ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to transform your Slack conversations
-          into a structured, easily searchable knowledge base.
-        </p>
-        <p class="lead my-4">
-          Ready to get started?
-        </p>
-        <script async data-uid="cf1a2e6f1e" src="https://threadscribeai.ck.page/cf1a2e6f1e/index.js"></script>
-          <!-- <a href={config.threadScribe.installLink} role="button" class="btn btn-primary btn-lg px-4 gap-3">
-            <i class="bi bi-slack"></i> <span>Add to Slack</span>
-          </a>
-          <a href={config.threadScribe.appHome} role="button" class="btn btn-outline-secondary btn-lg px-4">App Login</a>
-          </div> -->
-      </div>
-    </div>
-  </div>
 
-  <section class="features bg-primary">
-    <div class="container text-white py-5">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <!-- Replace `bi bi-journal-text` with your preferred icon class -->
-            <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
-          </div>
-          <div class="pb-3 pb-md-0">
-            <h5 class="text-uppercase fw-bold mb-1">Automated Summarization</h5>
-            <p class="m-0">Utilizes cutting-edge AI to summarize lengthy discussions into concise, actionable insights, saving you time
-              and enhancing decision-making.</p>
+  <section class="background-blue">
+
+
+    <div class="container py-5">
+      <div class="row flex-md-row-reverse align-items-center g-5 pb-5">
+        <div class="col-sm-12 col-lg-6">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/F9cT-vY5BKU?si=gUJ493MOHVHxvYrT" title="ThreadScribe.ai Promo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
-        <!-- Column 2 -->
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <i class="bi bi-plug" style="font-size: 2rem;"></i>
-          </div>
-          <div class="pb-3 pb-md-0">
-            <h5 class="text-uppercase fw-bold mb-1">Seamless Integration</h5>
-            <p class="m-0">Effortlessly integrates with Slack, ensuring a smooth transition from casual conversations to structured
-              knowledge without disrupting your workflow.</p>
-          </div>
-        </div>
-        <!-- Column 3 -->
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <!-- Replace `bi bi-search` with your preferred icon class -->
-            <i class="bi bi-search" style="font-size: 2rem;"></i>
-          </div>
-          <div>
-            <h5 class="text-uppercase fw-bold mb-1">Enhanced Discoverability</h5>
-            <p class="m-0">Transform the maze of Slack channels into a navigable treasure trove of knowledge. Dive into your team's
-              collective intelligence effortlessly!</p>
-          </div>
+        <div class="col-sm-12 col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-uppercase">
+            Turn Your Threads into Insights, instantly!
+          </h1>
+          <p class="lead fs-4 my-4">
+            ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to transform your Slack conversations
+            into a structured, easily searchable knowledge base.
+          </p>
+          <p class="lead fs-4 my-4">
+            Effortlessly organize your Slack discussions into searchable knowledge with one click.
+          </p>
+          <a href={config.threadScribe.installLink} class="btn btn-vibrant-pink btn-xl">TRY FOR FREE</a>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 d-flex px-5 justify-content-center align-items-center">
-          <img src={HowToUseThreadScribe.src} class="shadow-lg img-fluid img-fluid pt-3 pt-md-0"
-          alt="How to use ThreadScribe" width="100%" loading="lazy">
-        </div>
-        <div class="col-md-6">
-          <h2 class="mt-4">Find the signal through the noise with ThreaScribe.ai</h2>
-          <p class="my-2">Automatically extract and synthesize your corporate knowledge</p>
-          <a href={config.threadScribe.installLink} class="btn btn-primary btn-lg mt-3" role="button">
-            <i class="bi bi-slack"></i> Add to Slack
-          </a>
-        </div>
-        
-      </div>
-    </div>
-  </section>
 
-  <section class="bg-primary">
-    <div class="container text-white text-center py-5"  data-aos="fade-right" data-aos-delay="100">
-      <div class="row">
-        <h2 class="py-3">featured across the web</h2>
-      </div>
-      <div class="row py-4">
-        <div class="col">
-          <a href="https://theresanaiforthat.com/ai/threadscribe/?ref=featured&v=927520" target="_blank"><img width="300" src="https://media.theresanaiforthat.com/featured5.png"></a>
-        </div>
-        <div class="col">
-          <a href="https://www.producthunt.com/posts/threadscribe-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-threadscribe&#0045;ai" target="_blank">
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=438584&theme=dark" alt="ThreadScribe&#0046;ai - AI&#0045;powered&#0032;chatbot&#0032;converts&#0032;Slack&#0032;threads&#0032;to&#0032;knowledge&#0032;base | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="container py-5 " data-aos="fade-right" data-aos-delay="100">
     <div class="row text-center mb-4">
       <div class="col-12">
-        <h2 class="mb-4">How Does ThreadScribe Work?</h2>
+        <h2 class="mb-4 text-uppercase fs-4">how it works</h2>
+        <hr class="divider" />
       </div>
     </div>
     <div class="row text-center">
@@ -140,9 +70,97 @@ import { config } from '../config';
     </div>
   </section>
 
+
+
+
+
+
+  <section class="background-blue">
+    <div class="container text-white py-5">
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-start">
+          <div class="icon-container me-3">
+            <!-- Replace `bi bi-journal-text` with your preferred icon class -->
+            <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
+          </div>
+          <div class="pb-3 pb-md-0">
+            <h5 class="text-uppercase fs-4 fw-bold mb-1">Automated Summarization</h5>
+            <p class="m-0 fs-5">Utilizes cutting-edge AI to summarize lengthy discussions into concise, actionable insights, saving you time
+              and enhancing decision-making.</p>
+          </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-md-4 d-flex align-items-start">
+          <div class="icon-container me-3">
+            <i class="bi bi-plug" style="font-size: 2rem;"></i>
+          </div>
+          <div class="pb-3 pb-md-0">
+            <h5 class="text-uppercase fs-4 fw-bold mb-1">Seamless Integration</h5>
+            <p class="m-0 fs-5">Effortlessly integrates with Slack, ensuring a smooth transition from casual conversations to structured
+              knowledge without disrupting your workflow.</p>
+          </div>
+        </div>
+        <!-- Column 3 -->
+        <div class="col-md-4 d-flex align-items-start">
+          <div class="icon-container me-3">
+            <!-- Replace `bi bi-search` with your preferred icon class -->
+            <i class="bi bi-search" style="font-size: 2rem;"></i>
+          </div>
+          <div>
+            <h5 class="text-uppercase fs-4 fw-bold mb-1">Enhanced Discoverability</h5>
+            <p class="m-0 fs-5">Transform the maze of Slack channels into a navigable treasure trove of knowledge. Dive into your team's
+              collective intelligence effortlessly!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-flex px-5 justify-content-center align-items-center">
+          <img src={HowToUseThreadScribe.src} class="shadow-lg img-fluid img-fluid pt-3 pt-md-0"
+          alt="How to use ThreadScribe" width="100%" loading="lazy">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-4">Find the signal through the noise with ThreadScribe.ai</h2>
+          <p class="my-2">Automatically extract and synthesize your corporate knowledge</p>
+          <a href={config.threadScribe.installLink} class="btn btn-primary btn-lg mt-3" role="button">
+            <i class="bi bi-slack"></i> Add to Slack
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- <section class="background-dark">
+    <div class="container text-center py-3" data-aos="fade-right" data-aos-delay="100">
+      <div class="row">
+        <h2 class="py-3 text-uppercase fs-6">As featured in</h2>
+        <hr class="divider">
+      </div>
+      <div class="row py-4">
+        <div class="col">
+          <a href="https://theresanaiforthat.com/ai/threadscribe/?ref=featured&v=927520" target="_blank"><img width="300" src="https://media.theresanaiforthat.com/featured6.png"></a>
+        </div>
+        <div class="col">
+          <a href="https://www.producthunt.com/posts/threadscribe-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-threadscribe&#0045;ai" target="_blank">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=438584&theme=dark" alt="ThreadScribe&#0046;ai - AI&#0045;powered&#0032;chatbot&#0032;converts&#0032;Slack&#0032;threads&#0032;to&#0032;knowledge&#0032;base | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
   <section class="overwhelmed bg-primary">
     <div class="container text-white py-5" data-aos="fade-right" data-aos-delay="100">
-      <div class="row">
+      <div class="row flex-md-row-reverse">
+        
         <div class="col-md-6 px-4">
           <img src={SlackWithNotifications.src} alt="Slack Notifications" class="img-fluid">
         </div>
