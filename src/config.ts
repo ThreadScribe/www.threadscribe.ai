@@ -6,7 +6,8 @@ export const config = {
     twitter: "https://www.twitter.com/threadscribeai",
   },
   threadScribe: {
-    slack: "https://threadscribeai.slack.com",
+    slack:
+      "https://join.slack.com/t/threadscribeai/shared_invite/zt-2ebpbnvly-DPfMJREn2eL8iTgGYWVC6g",
     appHome: "https://app.threadscribe.ai",
     installLink: "https://bot.threadscribe.ai/slack/install",
   },
