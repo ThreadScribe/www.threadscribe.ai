@@ -1,236 +1,238 @@
 ---
-import SiteLayout from "../layouts/default.astro";
-
 import { config } from "../config";
+import SiteLayout from "../layouts/default.astro";
+import CTAButtons from "../components/CTAButtons.astro";
 ---
 
-<style>
-  .pricing {
-    font-size: 1.5rem;
-  }
-  .pricing .card {
-    border: none;
-    border-radius: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .pricing hr {
-    margin: 1.5rem 0;
-  }
-
-  .pricing .card-title {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-  }
-
-  .pricing .card-subtitle {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-  }
-
-  .pricing .card-price {
-    font-size: 3rem;
-    margin: 0;
-  }
-
-  .pricing .card-price .period {
-    /* font-size: 0.8rem; */
-  }
-
-  .pricing ul li {
-    margin-bottom: 1rem;
-  }
-
-  .pricing .text-muted {
-    opacity: 0.7;
-  }
-
-  /* .pricing .btn {
-    font-size: 80%;
-    border-radius: 5rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    padding: 1rem;
-    opacity: 0.7;
-    transition: all 0.2s;
-  } */
-
-  /* Hover Effects on Card */
-
-  @media (min-width: 992px) {
-    .pricing .card:hover {
-      margin-top: -0.25rem;
-      margin-bottom: 0.25rem;
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-    }
-
-    .pricing .card:hover .btn {
-      opacity: 1;
-    }
-  }
-</style>
-
 <SiteLayout>
-  <section class="background-blue pricing py-5">
-    <div class="container text-white py-4">
-      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="fw-bold mb-4">Transparent Pricing for Every Team</h1>
-        <p class="fs-5">
-          Choose the perfect ThreadScribe plan that fits your team's needs.
-          Simple, straightforward pricing to help you transform your Slack
-          workspace into a productive powerhouse.
+  <section class="ts-hero">
+    <div class="container">
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <div class="eyebrow">ThreadScribe Pricing</div>
+          <h1>
+            AI-powered solutions for customer-centric teams.<br />
+            <span class="glow">Start for free.</span>
+          </h1>
+          <h2>
+            ThreadScribe offers straight forward for CX teams that mean
+            business.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing py-5">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="plan-name">Free</h5>
+              <h6 class="plan-description">
+                AI-chat companion for Slack. Instantly summarize lengthly
+                threads and uncover insights, fast!
+              </h6>
+              <div class="d-flex align-items-center">
+                <p class="price">$0</p>
+              </div>
+              <hr />
+              <a class="btn btn-lg btn-outline-primary" href={config.threadScribe.installLink}>Start free</a>
+              <hr />
+
+              <span class="plan-features-header">All accounts include:</span>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check"></i>
+                  Unlimited Thread Summaries
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Basic Search Functionality
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Web and Mobile Access to ThreadScribe.ai
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Integration with Slack
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Help Center & Email Support
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="plan-name">Business</h5>
+              <h6 class="plan-description">
+                Build your own private consumer experience data hub with
+                real-time indexing and search features.
+              </h6>
+              <div class="d-flex align-items-center">
+                <p class="price">$2,500</p>
+                <p class="price-details align-middle">
+                  workspace / month billed yearly or $2,900 billed monthly
+                </p>
+              </div>
+              <hr />
+              <a class="btn btn-primary btn-lg" href={config.threadScribe.installLink}>Start free</a>
+              <hr />
+              <div class="plan-features-header">Everything in Free, plus:</div>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check"></i>
+                  Automated Channel Digests
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Scheduled channel summaries
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Intelligent Keyword Notifications
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Sophisticated Access Controls
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Premium Support & Dedicated Onboarding
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="plan-name">Enterprise</h5>
+              <h6 class="plan-description">
+                For organizations that want to leverage the power of AI at scale
+                but need additional security, control, and support.
+              </h6>
+              <div class="d-flex align-items-center">
+                <p class="price">
+                  <i class="bi bi-chat-dots-fill"></i>
+                </p>
+                <p class="price-details">
+                  Contact sales for pricing or to request a demo
+                </p>
+              </div>
+              <hr />
+              <a class="btn btn-outline-primary btn-lg" href={config.bookingLink}>Contact sales</a>
+              <hr />
+              <div class="plan-features-header">
+                Everything in Business, plus:
+              </div>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check"></i>
+                  Real-time Channel & Thread Indexing
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Dedicated Hosting
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Service & Uptime Commitment
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  Slack Enterprise Support & Integration
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5 mb-5 pricing-features">
+    <div class="row pb-3">
+      <div class="col">
+        <h2>What's included</h2>
+        <p>
+          Get started with dozens of out of the box features.
         </p>
       </div>
     </div>
+    <div class="row row-cols-2 row-cols-lg-4">
+      <div class="col">
+        <div class="feature-icon">
+          <i class="bi bi-chat-dots-fill"></i>
+        </div>
 
+        <div class="feature-title">AI Chat Companion</div>
+        <ul class="list-unstyled">
+          <li>Ad-hoc thread summaries</li>
+          <li>Automated digests</li>
+          <li>Keyword notifications</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="feature-icon">
+          <i class="bi bi-search"></i>
+        </div>
+
+        <div class="feature-title">Context Aware Search</div>
+        <ul class="list-unstyled">
+          <li>Globabl semantic search</li>
+          <li>Search summaries</li>
+          <li>Natural language processing</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="feature-icon">
+          <i class="bi bi-file-earmark-lock"></i>
+        </div>
+
+        <div class="feature-title">Knowledge Base</div>
+        <ul class="list-unstyled">
+          <li>Bring your own data</li>
+          <li>3rd party integrations</li>
+          <li>Automatic ingestion</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="feature-icon">
+          <i class="bi bi-building-up"></i>
+        </div>
+
+        <div class="feature-title">Enterprise Ready</div>
+        <ul class="list-unstyled">
+          <li>Dedicated CSM</li>
+          <li>Data segregation</li>
+          <li>SLA Commitment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-banner">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row py-5 text-center">
         <div class="col">
-          <div class="row">
-            <!-- Free Tier -->
-            <div class="col-12 col-md-6">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Essential
-                  </h5>
-                  <h6 class="card-price text-center">$0</h6>
-                  <h5 class="card-subtitle text-muted text-center">FREE</h5>
-                  <hr />
-                  <p class="fs-5 fw-bold">All accounts include:</p>
-                  <ul class="list-unstyled">
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Unlimited Thread Summaries
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Basic Search Functionality
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Web and Mobile Access to ThreadScribe.ai
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Integration with Slack
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Help Center & Email Support
-                    </li>
-                  </ul>
-                  <div class="d-grid">
-                    <script
-                      async
-                      data-uid="edfdf5fa4b"
-                      src="https://threadscribeai.ck.page/edfdf5fa4b/index.js"
-                    ></script>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Business Tier -->
-            <div class="col-12 col-md-6">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Business
-                  </h5>
-                  <h6 class="card-price text-center">
-                    <del
-                      >$15<span class="period text-secondary">
-                        /user/month</span
-                      ></del
-                    >
-                  </h6>
-                  <h5 class="card-subtitle text-muted text-center">
-                    FREE during Beta!
-                  </h5>
-                  <hr />
-                  <p class="fs-5 fw-bold">Includes everything in Essential plus:</p>
-                  <ul class="list-unstyled">
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Automated Channel Digests
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Scheduled channel summaries
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Intelligent Keyword Notifications
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Sophisticated Access Controls
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Premium Support & Dedicated Onboarding
-                    </li>
-                  </ul>
-                  <div class="d-grid">
-                    <script
-                      async
-                      data-uid="7f347c94e6"
-                      src="https://threadscribeai.ck.page/7f347c94e6/index.js"
-                    ></script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Enterprise Tier -->
-            <div class="col-12 my-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">
-                    Enterprise
-                  </h5>
-                  <h6 class="card-price text-center">Custom Pricing</h6>
-                  <h5 class="card-subtitle text-muted text-center">
-                    Get in touch!
-                  </h5>
-                  <hr />
-                  <p class="fs-5 fw-bold">For organizations that want to leverage the power of AI at scale but need additional security, control, and support:</p>
+          <h1 class="py-5">
+            Get started <span class="glow">in minutes</span>
+          </h1>
 
-                  <ul class="list-unstyled">
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Real-time Channel & Thread Indexing
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Robust Data Segregation & Security
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Dedicated Hosting
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Service & Uptime Commitment
-                    </li>
-                    <li>
-                      <i class="bi bi-check"></i>
-                      Slack Enterprise Support & Integration
-                    </li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href={config.bookingLink} class="btn btn-primary text-uppercase">Schedule a Call</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CTAButtons isDark="true" />
         </div>
       </div>
     </div>

@@ -1,112 +1,190 @@
 ---
-import SiteLayout from '../layouts/default.astro';
+import { config } from "../config";
 
-import HowToUseThreadScribe from '../images/how_to_use_threadscribe.png';
+import SiteLayout from "../layouts/default.astro";
+import CTAButtons from "../components/CTAButtons.astro";
 
-import HowThreadScribeWorks1 from '../images/how_threadscribe_works_1.png';
-import HowThreadScribeWorks3 from '../images/how_threadscribe_works_3.png';
-import SlackWithNotifications from '../images/slack_with_notifications.png';
+import HowToUseThreadScribe from "../images/how_to_use_threadscribe.png";
 
-import { config } from '../config';
-import Navigation from '../components/Navigation.astro';
+import SummaryExample from "../images/threadscribe_summary_example.png";
+import SearchExample from "../images/threadscribe_search_example.png";
 
+import Confluence from "../logos/confluence.svg";
+import Freshdesk from "../logos/freshdesk.svg";
+import GoogleDrive from "../logos/googledrive.svg";
+import NotionLogo from "../logos/notion.svg";
+import SlackLogo from "../logos/slack.svg";
 ---
 
 <SiteLayout>
-
-  <section class="background-blue">
-    <div class="container py-5">
-      <div class="row flex-md-row-reverse align-items-center g-5 pb-5">
-        <div class="col-sm-12 col-lg-6">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/5SW5wozdY2s?si=fHNHHJfr-vSO2txt" title="ThreadScribe.ai Promo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-uppercase">
-            Turn Your Threads into Insights, instantly!
+  <!-- hero unit -->
+  <section class="ts-hero">
+    <div class="container">
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <h1>
+            The Ultimate<br /><span class="glow">Slack-based Data Hub</span><br
+            />for Support Teams
           </h1>
-          <p class="lead fs-4 my-4">
-            ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to transform your Slack conversations
-            into a structured, easily searchable knowledge base.
-          </p>
-          <p class="lead fs-4 my-4">
-            Effortlessly organize your Slack discussions into searchable knowledge with one click.
-          </p>
-          <a href={config.threadScribe.installLink} class="btn btn-vibrant-pink btn-xl">TRY FOR FREE</a>
-
+          <!-- <h1>
+            The Ultimate Chat Companion for <span class="glow"
+              >Enhancing Agent Productivity</span
+            >
+          </h1> -->
+          <h2>
+            Turn your Slack workspace into a structured, searchable
+            knowledgebase with our AI-powered chat companion.
+          </h2>
+          <CTAButtons />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="container py-5 " data-aos="fade-right" data-aos-delay="100">
-    <div class="row text-center mb-4">
-      <div class="col-12">
-        <h2 class="mb-4 text-uppercase fs-4">how it works</h2>
-        <hr class="divider" />
+  <!-- video -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/5SW5wozdY2s?si=fHNHHJfr-vSO2txt"
+            title="ThreadScribe.ai Promo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section class="container py-5 icon-list">
     <div class="row text-center">
-      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <div class="number-circle mb-3">1</div>
-        <h3 class="mb-3">Find a Thread </h3>
-        <img src={HowThreadScribeWorks1.src} alt="Step 1" class="img-fluid step-image">
+      <div class="col">
+        <h2 class="pb-5">
+          Your favorite tools. <span class="glow">Way more value.</span>
+        </h2>
       </div>
-      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <div class="number-circle mb-3">2</div>
-        <h3 class="mb-3">Mention @ThreadScribe</h3>
-        <img src={HowToUseThreadScribe.src} alt="Step 2" class="img-fluid step-image">
+    </div>
+    <div class="row pb-3 text-center">
+      <div class="col">
+        <img src={SlackLogo.src} />
       </div>
-      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <div class="number-circle mb-3">3</div>
-        <h3 class="mb-3">View your Scribes!</h3>
-        <img src={HowThreadScribeWorks3.src} alt="Step 3" class="img-fluid step-image">
+      <div class="col">
+        <img src={NotionLogo.src} />
+      </div>
+      <div class="col">
+        <img src={GoogleDrive.src} />
+      </div>
+      <div class="col">
+        <img src={Confluence.src} />
+      </div>
+      <div class="col">
+        <img src={Freshdesk.src} />
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- <section class="container py-5">
+    <div class="container py-5">
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <h2>
+            Transform Your Slack into a <br /><span class="glow"
+              >Powerful Customer Support Hub</span
+            >
+
+            !-- Empowering companies to <br /><span class="glow"
+              >stand out with customer experience</span
+            > --
+          </h2>
+          <p class="py-3">
+            Watch your customer satisfaction soar as agents achieve new heights
+            of efficiency.
+          </p>
+          <button class="btn btn-outline-dark btn-lg"
+            >Explore ThreadScribe ></button
+          >
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="py-5 mb-5 container">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="eyebrow">instant thread summarization</div>
+          <h3 class="text-primary">
+            Boost Your Agents' Productivity with Seamless Slack Solutions
+          </h3>
+          <p class="py-3 fs-5">
+            Intelligently summarize your conversations and make them serchable
+            right from Slack.
+          </p>
+
+          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
+        </div>
+        <div class="col-12 col-lg-6">
+          <img
+            src={SummaryExample.src}
+            class="img-fluid rounded shadow-lg"
+            alt="Instantly summarize your lengthly slack threads with ThreadScribe.ai"
+            width="100%"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="container py-5">
+    <div class="">
+      <div class="row flex-md-row-reverse align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="eyebrow">Clarity at Your Fingertips</div>
+          <h3 class="text-primary">Find What Matters, Instantly</h3>
+          <p class="py-3 fs-5">
+            ThreadScribe.ai simplifies your workflow, quickly surfacing key
+            insights so you can resolve issues faster. Less clutter, more
+            clarity — empower your team to provide standout service effortlessly.
+          </p>
 
-
-
-
-
-  <section class="background-blue">
-    <div class="container text-white py-5">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <!-- Replace `bi bi-journal-text` with your preferred icon class -->
-            <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
-          </div>
-          <div class="pb-3 pb-md-0">
-            <h5 class="text-uppercase fs-4 fw-bold mb-1">Automated Summarization</h5>
-            <p class="m-0 fs-5">Utilizes cutting-edge AI to summarize lengthy discussions into concise, actionable insights, saving you time
-              and enhancing decision-making.</p>
-          </div>
+          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
         </div>
-        <!-- Column 2 -->
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <i class="bi bi-plug" style="font-size: 2rem;"></i>
-          </div>
-          <div class="pb-3 pb-md-0">
-            <h5 class="text-uppercase fs-4 fw-bold mb-1">Seamless Integration</h5>
-            <p class="m-0 fs-5">Effortlessly integrates with Slack, ensuring a smooth transition from casual conversations to structured
-              knowledge without disrupting your workflow.</p>
-          </div>
+        <div class="col-12 col-lg-6">
+          <img
+            src={SearchExample.src}
+            class="img-fluid rounded shadow-lg"
+            alt="Find what matters, instantly, with ThreadScribe.ai"
+            width="100%"
+            loading="lazy"
+          />
         </div>
-        <!-- Column 3 -->
-        <div class="col-md-4 d-flex align-items-start">
-          <div class="icon-container me-3">
-            <!-- Replace `bi bi-search` with your preferred icon class -->
-            <i class="bi bi-search" style="font-size: 2rem;"></i>
-          </div>
-          <div>
-            <h5 class="text-uppercase fs-4 fw-bold mb-1">Enhanced Discoverability</h5>
-            <p class="m-0 fs-5">Transform the maze of Slack channels into a navigable treasure trove of knowledge. Dive into your team's
-              collective intelligence effortlessly!</p>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-bg-primary-10 py-5">
+    <div class="container">
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <h2>
+            Transform Your Slack into a <br /><span class="glow"
+              >Powerful Customer Support Hub</span
+            >
+
+            <!-- !-- Empowering companies to <br /><span class="glow"
+              >stand out with customer experience</span
+            > -- -->
+          </h2>
+          <p class="py-3">
+            Watch your customer satisfaction soar as agents achieve new heights
+            of efficiency.
+          </p>
+          <a class="btn btn-primary"
+            href={config.threadScribe.installLink}>
+            <i class="bi bi-slack btn-lg"></i> Add to Slack
+          </a>
         </div>
       </div>
     </div>
@@ -114,61 +192,161 @@ import Navigation from '../components/Navigation.astro';
 
   <section class="py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 d-flex px-5 justify-content-center align-items-center">
-          <img src={HowToUseThreadScribe.src} class="shadow-lg img-fluid img-fluid pt-3 pt-md-0"
-          alt="How to use ThreadScribe" width="100%" loading="lazy">
+      <div class="row pb-5">
+        <div class="col">
+          <div class="eyebrow">why threadscribe</div>
+          <h3>
+            Power Your Agents to<br />
+            <span class="glow">Wow and Win</span>
+          </h3>
         </div>
-        <div class="col-md-6">
-          <h2 class="mt-4">Find the signal through the noise with ThreadScribe.ai</h2>
-          <p class="my-2">Automatically extract and synthesize your corporate knowledge</p>
-          <a href={config.threadScribe.installLink} class="btn btn-primary btn-lg mt-3" role="button">
-            <i class="bi bi-slack"></i> Add to Slack
-          </a>
+      </div>
+
+      <div class="row row-cols-4">
+        <div class="col">
+          <div class="icon-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="currentColor"
+              class="bi bi-lightning-charge-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"
+              ></path>
+            </svg>
+          </div>
+          <h4 class="pt-3 pb-4">Fast</h4>
+          <p class="fs-5">
+            Automatically processes conversations in real-time, ensuring
+            instant insights and actions.
+          </p>
         </div>
-        
+        <div class="col">
+          <div class="icon-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="currentColor"
+              class="bi bi-shield-lock-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5"
+              ></path>
+            </svg>
+          </div>
+          <h4 class="pt-3 pb-4">Secure</h4>
+          <p class="fs-5">
+            Safeguards your data with top-tier encryption, blending seamlessly
+            into your existing workflows.
+          </p>
+        </div>
+        <div class="col">
+          <div class="icon-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="currentColor"
+              class="bi bi-plug-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.08 2.08 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.92 1.92 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0"
+              ></path>
+            </svg>
+          </div>
+          <h4 class="pt-3 pb-4">Seamless</h4>
+          <p class="fs-5">
+            Smoothly integrates with Slack for an effortless transition to
+            structured knowledge.
+          </p>
+        </div>
+        <div class="col">
+          <div class="icon-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              ></path>
+            </svg>
+          </div>
+          <h4 class="pt-3 pb-4">Powerful</h4>
+          <p class="fs-5">
+            Transform the maze of Slack channels into a navigable treasure
+            trove of knowledge.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="container py-5">
+    <hr />
+  </section>
 
-
-
-
-  <!-- <section class="background-dark">
-    <div class="container text-center py-3" data-aos="fade-right" data-aos-delay="100">
-      <div class="row">
-        <h2 class="py-3 text-uppercase fs-6">As featured in</h2>
-        <hr class="divider">
-      </div>
-      <div class="row py-4">
-        <div class="col">
-          <a href="https://theresanaiforthat.com/ai/threadscribe/?ref=featured&v=927520" target="_blank"><img width="300" src="https://media.theresanaiforthat.com/featured6.png"></a>
-        </div>
-        <div class="col">
-          <a href="https://www.producthunt.com/posts/threadscribe-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-threadscribe&#0045;ai" target="_blank">
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=438584&theme=dark" alt="ThreadScribe&#0046;ai - AI&#0045;powered&#0032;chatbot&#0032;converts&#0032;Slack&#0032;threads&#0032;to&#0032;knowledge&#0032;base | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-        </div>
+  <!-- FAQs -->
+  <section class="container py-5">
+    <div class="row pb-5">
+      <div class="col">
+        <div class="eyebrow">Frequently Asked questions</div>
+        <h2 class="py-2">Everything you need to know</h2>
+        <p>
+          Your question not answered here? <a
+            href="mailto:hello@threadscribe.ai">Email us</a
+          >.
+        </p>
       </div>
     </div>
-  </section> -->
 
-  <section class="overwhelmed bg-primary">
-    <div class="container text-white py-5" data-aos="fade-right" data-aos-delay="100">
-      <div class="row flex-md-row-reverse">
-        
-        <div class="col-md-6 px-4">
-          <img src={SlackWithNotifications.src} alt="Slack Notifications" class="img-fluid">
-        </div>
-        <div class="col-md-6 px-5">
-          <h2 class="mb-2">Feeling Overwhelmed by Slack Notifications?</h2>
-          <p class="my-2">ThreadScribe.ai uses AI to automatically summarize your slack threads into easily digestible knowledge base articles.</p>
-          <a href={config.threadScribe.installLink} class="btn btn-light btn-lg mt-3" role="button">
-            <i class="bi bi-slack"></i> Add to Slack
-          </a>
-        </div>
+    <div class="row row-cols-3 g-4 ts-faq">
+      <div class="col">
+        <h4>What is ThreadScribe?</h4>
+        <p>
+          ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to
+          transform your Slack conversations into a structured, easily
+          searchable knowledge base.
+        </p>
+      </div>
+      <div class="col">
+        <h4>How much does ThreadScribe cost?</h4>
+        <p>
+          Threadscribe is available for free for small workspaces and workloads. Subscription plans 
+          are available for larger organizations who are serious about providing exceptional 
+          customer service. Pricing is available on our pricing page.
+        </p>
+      </div>
+      <div class="col">
+        <h4>How can I get started with ThreadScribe?</h4>
+        <p>
+          To get started with ThreadScribe, simply install the app on your
+          Slack workspace and begin summarizing some of your conversations.
+        </p>
       </div>
     </div>
   </section>
 
+  <section class="ts-banner">
+    <div class="container">
+      <div class="row py-5 text-center">
+        <div class="col">
+          <h1 class="py-5">
+            Get started <span class="glow">in minutes</span>
+          </h1>
+          <CTAButtons isDark="true" />
+        </div>
+      </div>
+    </div>
+  </section>
 </SiteLayout>

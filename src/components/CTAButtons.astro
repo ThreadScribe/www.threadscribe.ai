@@ -1,0 +1,23 @@
+---
+import { config } from "../config";
+
+const { isDark } = Astro.props;
+---
+
+<div class="cta-buttons">
+  <a href={config.threadScribe.installLink} class="btn btn-primary btn-xl">
+    <i class="bi bi-stars"></i>
+    Sign up for free
+  </a>
+  <a
+    href={config.bookingLink}
+    class=`btn btn-xl ${isDark ? "btn-outline-light" : "btn-outline-dark"}`
+  >
+    Scheudle a demo
+  </a>
+  <div class="caption pt-3">
+    <i class="bi bi-credit-card"></i> No credit card required | <i
+      class="bi bi-clock-history"></i>
+    14-day free trail
+  </div>
+</div>

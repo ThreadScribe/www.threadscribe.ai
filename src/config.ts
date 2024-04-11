@@ -1,5 +1,5 @@
 export const config = {
-  bookingLink: "https://calendly.com/threadscribeai/mat-intro",
+  bookingLink: "https://app.apollo.io/#/meet/threadscribe-mat",
   social: {
     linkedIn: "https://www.linkedin.com/company/threadscribeai",
     facebook: "https://www.facebook.com/threadscribeai",

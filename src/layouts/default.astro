@@ -1,62 +1,73 @@
 ---
-import Nav from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import Nav from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
-import ThreadScribeIcon from '../images/threadscribe_logo_512.jpg';
+import ThreadScribeIcon from "../images/threadscribe_logo_512.jpg";
+import "../styles/styles.scss";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ThreadScribe.ai</title>
+    <meta
+      content="ThreadScribe.ai is a powereful AI-powered chatbot for Slack designed to transform your Slack conversations into a structured, easily searchable knowledge base."
+      name="description"
+    />
+    <meta content="threadscribe, slack, ai" name="keywords" />
 
-  <title>ThreadScribe.ai</title>
-  <meta
-    content="ThreadScribe.ai is a powereful AI-powered chatbot for Slack designed to transform your Slack conversations into a structured, easily searchable knowledge base."
-    name="description">
-  <meta content="threadscribe, slack, ai" name="keywords">
+    <!-- Favicons -->
+    <link href="/threadscribe_logo_64.jpg" rel="icon" />
+    <link href={ThreadScribeIcon.src} rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="/threadscribe_logo_64.jpg" rel="icon">
-  <link href={ThreadScribeIcon.src} rel="apple-touch-icon">
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W46VHD5B");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W46VHD5B"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
 
-  <link href="/css/styles.css" rel="stylesheet">
+    <Nav />
 
-  <!-- Google Tag Manager -->
-  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-W46VHD5B');</script>
-  <!-- End Google Tag Manager -->
-</head>
+    <slot />
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W46VHD5B"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <Footer />
 
-  <Nav />
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script is:inline src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script is:inline src="/js/scripts.js"></script>
 
-  <slot />
-
-  <Footer />
-
-  <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script is:inline src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script is:inline src="/js/scripts.js"></script>
-
-  <script is:inline async data-uid="ea6cb2891b" src="https://threadscribeai.ck.page/ea6cb2891b/index.js"></script>
-</body>
-
+    <script
+      is:inline
+      async
+      data-uid="ea6cb2891b"
+      src="https://threadscribeai.ck.page/ea6cb2891b/index.js"></script>
+  </body>
 </html>
-

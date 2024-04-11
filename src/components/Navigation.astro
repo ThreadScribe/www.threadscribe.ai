@@ -1,41 +1,122 @@
 ---
-import { config } from '../config';
-import Logo from '../images/threadscribe_logo_64.jpg';
+import { config } from "../config";
+import ThreadScribeHead from "../images/threadscribe_head_sm.png";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
+
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="https://www.threadscribe.ai">
-      <span class="brand-logo">
-        <img src={Logo.src} alt="Logo" class="d-inline-block align-text-top pr-5 img-circle img-thumbnail">
-        <span class="ps-3 d-none d-md-block">ThreadScribe.ai</span>
-      </span>
-      
-    </a>
-
-    <button class="navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#ts-navigation"
+      aria-controls="ts-navigation"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
+    <div class="collapse navbar-collapse d-lg-flex" id="ts-navigation">
+      <a
+        class="navbar-brand col-lg-3 me-0 d-none d-lg-block"
+        href="https://www.threadscribe.ai/"
+      >
+        <div class="d-flex">
+          <img src={ThreadScribeHead.src} alt="Logo" />
+          <span class="p-2 pt-1 d-none d-md-block fw-bold">ThreadScribe.ai</span
+          >
+        </div>
+      </a>
+
+      <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+        <li class="nav-item">
+          <a
+            class={(currentPath === "" ? "active" : "") + " nav-link"}
+            aria-current="page"
+            href="/">Home</a
+          >
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Use Cases
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/use-cases/customer-experience"
+                >Customer Experience</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/use-cases/community-management"
+                >Community Management</a>
+            </li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a
+            class={(currentPath === "pricing" ? "active" : "") + " nav-link"}
+            href="/pricing">Pricing</a
+          >
+        </li>
+      </ul>
+
+      <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+        <a href={config.threadScribe.appHome} class="btn btn-link me-2"
+          >Log In</a
+        >
+        <a href={config.threadScribe.installLink} class="btn btn-primary"
+          >Sign up for free</a
+        >
+      </div>
+    </div>
+
+    <!-- <button
+      class="navbar-toggler"
+      role="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarsExample11"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class={(currentPath === "" ? "active" : "") + " nav-link"} aria-current="page" href="/">Home</a>
+          <a
+            class={(currentPath === "" ? "active" : "") + " nav-link"}
+            aria-current="page"
+            href="/">Home</a
+          >
         </li>
         <li class="nav-item">
-          <a class={(currentPath === "pricing" ? "active" : "") + " nav-link"} href="/pricing">Pricing</a>
+          <a
+            class={(currentPath === "pricing" ? "active" : "") + " nav-link"}
+            href="/pricing">Pricing</a
+          >
         </li>
       </ul>
       <div class="d-flex">
-        <a href={config.threadScribe.appHome} class="btn btn-outline-secondary me-2">Log In</a>
-        <a href={config.threadScribe.installLink} class="btn btn-primary">Install</a>
+        <a
+          href={config.threadScribe.appHome}
+          class="btn btn-outline-secondary me-2">Log In</a
+        >
+        <a href={config.threadScribe.installLink} class="btn btn-primary"
+          >Install</a
+        >
       </div>
-    </div>
-  </div>
+    </div> -->
   </div>
 </nav>
-
-
