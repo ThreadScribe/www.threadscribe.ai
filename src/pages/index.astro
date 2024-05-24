@@ -2,7 +2,7 @@
 import { config } from "../config";
 
 import CTAButtons from "../components/CTAButtons.astro";
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
 
 import SearchExample from "../images/threadscribe_search_example.png";
 import SummaryExample from "../images/threadscribe_summary_example.png";
@@ -12,9 +12,13 @@ import Freshdesk from "../logos/freshdesk.svg";
 import GoogleDrive from "../logos/googledrive.svg";
 import NotionLogo from "../logos/notion.svg";
 import SlackLogo from "../logos/slack.svg";
+
+const title = "The Best AI Chat Companion for CX Teams | ThreadScribe.ai";
+const description =
+  "ThreadScribe.ai is a powereful AI-powered chatbot for Slack designed to transform your Slack conversations into a structured, easily searchable knowledge base.";
 ---
 
-<SiteLayout>
+<SiteLayout title={title} description={description}>
   <!-- hero unit -->
   <section class="ts-hero">
     <div class="container">

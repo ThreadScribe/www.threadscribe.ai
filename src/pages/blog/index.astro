@@ -1,5 +1,5 @@
 ---
-import SiteLayout from "../../layouts/default.astro";
+import SiteLayout from "../../layouts/BaseLayout.astro";
 
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
@@ -22,9 +22,13 @@ const posts: Post[] = response.results || []; // Safely access results
 if (!Array.isArray(posts)) {
   console.error("Expected posts to be an array, but got:", posts);
 }
+
+const title = "The Blog | ThreadScribe.ai";
+const description =
+  "Our latest articles on the intersection between consumer experience and generative AI. The ThreadScribe.ai blog.";
 ---
 
-<SiteLayout>
+<SiteLayout title={title} description={description}>
   <div class="container">
     <section class="ts-hero">
       <div class="container">

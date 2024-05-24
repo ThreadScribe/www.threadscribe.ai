@@ -1,5 +1,7 @@
 ---
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
+
+const title = "Thank you for installing ThreadScribe.ai";
 ---
 
 <script>
@@ -8,17 +10,15 @@ import SiteLayout from "../layouts/default.astro";
   }, 3000);
 </script>
 
-<SiteLayout>
+<SiteLayout title={title} description={title}>
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-12 text-center">
         <h2>Thank You for Signing Up!</h2>
+        <p class="lead">You're being redirected to the app installation page...</p>
         <p class="lead">
-          You're being redirected to the app installation page...
-        </p>
-        <p class="lead">
-          If you are not redirected, please <a
-            href="https://bot.threadscribe.ai/slack/install">click here.</a
+          If you are not redirected, please <a href="https://bot.threadscribe.ai/slack/install"
+            >click here.</a
           >
         </p>
         <div class="spinner-border text-primary" role="status">

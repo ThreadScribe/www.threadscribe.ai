@@ -1,14 +1,17 @@
 ---
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
+
+const title = "404 Page not found | ThreadScribe.ai";
+const description = "Page not found.";
 ---
 
 <style>
-.notfound {
-  margin: 10rem 0;
-}
+  .notfound {
+    margin: 10rem 0;
+  }
 </style>
 
-<SiteLayout>
+<SiteLayout title={title} description={description}>
   <div class="container text-center my-4">
     <div class="row align-items-center">
       <div class="col text-center align-self-center notfound">

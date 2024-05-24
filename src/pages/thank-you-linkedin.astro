@@ -1,7 +1,9 @@
 ---
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
 
 import { config } from "../config";
+
+const title = "Thank you for installing ThreadScribe.ai";
 ---
 
 <style>
@@ -16,14 +18,12 @@ import { config } from "../config";
     }
   }
 </style>
-<SiteLayout>
+<SiteLayout title={title} description={title}>
   <div class="container my-4">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 support text-center">
         <h1>Click the button below to add ThreadScribe to Slack</h1>
-        <a
-          href={config.threadScribe.installLink}
-          class="btn btn-primary btn-lg mt-4"
+        <a href={config.threadScribe.installLink} class="btn btn-primary btn-lg mt-4"
           ><i class="bi bi-download"></i> Add to Slack</a
         >
       </div>

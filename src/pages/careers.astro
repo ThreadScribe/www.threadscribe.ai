@@ -1,5 +1,9 @@
 ---
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
+
+const title = "Careers | ThreadScribe.ai";
+const description =
+  "Join a world class team building innovative AI technologies for the CX community.";
 ---
 
 <style>
@@ -12,16 +16,15 @@ import SiteLayout from "../layouts/default.astro";
     margin-top: 2rem;
     font-size: 1.25rem;
     color: #6c757d;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .angellist_jobs-title-link {
-    font-size:3em;
+    font-size: 3em;
   }
 </style>
 
-<SiteLayout>
-
+<SiteLayout title={title} description={description}>
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8">
@@ -29,20 +32,25 @@ import SiteLayout from "../layouts/default.astro";
           <h1>Careers at ThreadScribe.ai</h1>
           <p>Join our team and help shape the future of workplace communication!</p>
         </div>
-        <hr>
+        <hr />
         <div>
           <h2 class="fs-3">Open Positions</h2>
-          <script data-startup="threadscribe-ai" src="https://wellfound.com/javascripts/embed_jobs.js" id="angellist_embed" async></script>
+          <script
+            data-startup="threadscribe-ai"
+            src="https://wellfound.com/javascripts/embed_jobs.js"
+            id="angellist_embed"
+            async></script>
         </div>
         <!-- Placeholder for when there are no job listings -->
         <div class="no-jobs-message">
           <!-- <p class="">There are currently no open positions, but we're always on the lookout for talented individuals. Feel free to send us your resume, and we'll reach out when a suitable position opens up!</p> -->
-          <p class="">Don't see a position for you? We're always on the lookout for talented individuals. Feel free to send us your resume, and we'll reach out when a suitable position opens up!</p>
+          <p class="">
+            Don't see a position for you? We're always on the lookout for talented individuals. Feel
+            free to send us your resume, and we'll reach out when a suitable position opens up!
+          </p>
           <p><a href="mailto:hello@threadscribe.ai">hello@threadscribe.ai</a></p>
         </div>
       </div>
     </div>
   </div>
-
-  
 </SiteLayout>

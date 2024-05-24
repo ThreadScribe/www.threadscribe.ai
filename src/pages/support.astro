@@ -1,26 +1,30 @@
 ---
-import SiteLayout from "../layouts/default.astro";
+import SiteLayout from "../layouts/BaseLayout.astro";
+
+const title = "Get Help | ThreadScribe.ai";
+const description = "Need help? Email us at hello@threadscribe.ai and we'll get back to you ASAP.";
 ---
 
 <style>
-.support {
-  margin-top: 250px;
-  margin-bottom: 250px
-}
-@media (max-width: 992px) {
   .support {
-    margin-top:100px
+    margin-top: 250px;
+    margin-bottom: 250px;
   }
-}
+  @media (max-width: 992px) {
+    .support {
+      margin-top: 100px;
+    }
+  }
 </style>
-<SiteLayout>
+<SiteLayout title={title} description={description}>
   <div class="container my-4">
     <div class="row">
       <div class="col support">
         <h1>Need Help?</h1>
-        <h2><a href="https://threadscribeai.slack.com/">Join our Slack</a> OR email 
-          us at <a href="mailto:hello@threadscribe.ai">hello@threadscribe.ai</a>.</h2>
+        <h2>
+          Email us at <a href="mailto:hello@threadscribe.ai">hello@threadscribe.ai</a>.
+        </h2>
       </div>
-    </div> 
+    </div>
   </div>
 </SiteLayout>

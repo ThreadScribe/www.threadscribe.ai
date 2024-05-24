@@ -1,10 +1,14 @@
 ---
-import { config } from "../config";
-import SiteLayout from "../layouts/default.astro";
 import CTAButtons from "../components/CTAButtons.astro";
+import { config } from "../config";
+import SiteLayout from "../layouts/BaseLayout.astro";
+
+const title = "Pricing | ThreadScribe.ai";
+const description =
+  "The best AI powered chatbot for consumer experience teams. We have a pricing plan for all teams, no matter what size.";
 ---
 
-<SiteLayout>
+<SiteLayout title={title} description={description}>
   <section class="ts-hero">
     <div class="container">
       <div class="d-flex justify-content-center text-center">
@@ -14,10 +18,7 @@ import CTAButtons from "../components/CTAButtons.astro";
             AI-powered solutions for customer-centric teams.<br />
             <span class="glow">Start for free.</span>
           </h1>
-          <h2>
-            ThreadScribe offers straight forward for CX teams that mean
-            business.
-          </h2>
+          <h2>ThreadScribe offers straight forward for CX teams that mean business.</h2>
         </div>
       </div>
     </div>
@@ -31,16 +32,15 @@ import CTAButtons from "../components/CTAButtons.astro";
             <div class="card-body">
               <h5 class="plan-name">Free</h5>
               <h6 class="plan-description">
-                AI-chat companion for Slack. Instantly summarize lengthly
-                threads and uncover insights, fast!
+                AI-chat companion for Slack. Instantly summarize lengthly threads and uncover
+                insights, fast!
               </h6>
               <div class="d-flex align-items-center">
                 <p class="price">$0</p>
               </div>
               <hr />
-              <a
-                class="btn btn-lg btn-outline-primary"
-                href={config.threadScribe.installLink}>Start free</a
+              <a class="btn btn-lg btn-outline-primary" href={config.threadScribe.installLink}
+                >Start free</a
               >
               <hr />
 
@@ -76,8 +76,8 @@ import CTAButtons from "../components/CTAButtons.astro";
             <div class="card-body">
               <h5 class="plan-name">Business</h5>
               <h6 class="plan-description">
-                Build your own private consumer experience data hub with
-                real-time indexing and search features.
+                Build your own private consumer experience data hub with real-time indexing and
+                search features.
               </h6>
               <div class="d-flex align-items-center">
                 <p class="price">$99</p>
@@ -86,9 +86,7 @@ import CTAButtons from "../components/CTAButtons.astro";
                 </p>
               </div>
               <hr />
-              <a
-                class="btn btn-primary btn-lg"
-                href={config.threadScribe.installLink}>Start free</a
+              <a class="btn btn-primary btn-lg" href={config.threadScribe.installLink}>Start free</a
               >
               <hr />
               <div class="plan-features-header">Everything in Free, plus:</div>
@@ -123,26 +121,19 @@ import CTAButtons from "../components/CTAButtons.astro";
             <div class="card-body">
               <h5 class="plan-name">Enterprise</h5>
               <h6 class="plan-description">
-                For organizations that want to leverage the power of AI at scale
-                but need additional security, control, and support.
+                For organizations that want to leverage the power of AI at scale but need additional
+                security, control, and support.
               </h6>
               <div class="d-flex align-items-center">
                 <p class="price">
                   <i class="bi bi-chat-dots-fill"></i>
                 </p>
-                <p class="price-details">
-                  Contact sales for pricing or to request a demo
-                </p>
+                <p class="price-details">Contact sales for pricing or to request a demo</p>
               </div>
               <hr />
-              <a
-                class="btn btn-outline-primary btn-lg"
-                href={config.bookingLink}>Contact sales</a
-              >
+              <a class="btn btn-outline-primary btn-lg" href={config.bookingLink}>Contact sales</a>
               <hr />
-              <div class="plan-features-header">
-                Everything in Business, plus:
-              </div>
+              <div class="plan-features-header">Everything in Business, plus:</div>
               <ul class="list-unstyled">
                 <li>
                   <i class="bi bi-check"></i>

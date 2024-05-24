@@ -1,6 +1,6 @@
 ---
 import CTAButtons from "../../components/CTAButtons.astro";
-import SiteLayout from "../../layouts/default.astro";
+import SiteLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
@@ -8,7 +8,9 @@ export async function getStaticPaths() {
   const response = await fetch(
     `https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({
       apiKey: builderAPIpublicKey,
-      fields: ["data.slug", "data.title", "data.category", "data.headerImage"].join(","),
+      fields: ["data.slug", "data.title", "data.category", "data.snippet", "data.headerImage"].join(
+        ","
+      ),
       cachebust: "true",
     }).toString()}`
   )
@@ -22,16 +24,14 @@ export async function getStaticPaths() {
     return [];
   }
 
-  return posts.map(({ data: { slug, title, headerImage } }) => ({
+  return posts.map(({ data: { slug, title, headerImage, snippet } }) => ({
     params: { slug },
-    props: { title, headerImage },
+    props: { title, headerImage, snippet },
   }));
 }
 
 const { slug } = Astro.params;
-const { title, headerImage } = Astro.props;
-
-console.log("title", title);
+const { title, headerImage, snippet } = Astro.props;
 
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
@@ -85,7 +85,7 @@ const { html: postHTML } = await fetch(
   }
 </style>
 
-<SiteLayout>
+<SiteLayout title={title} description={snippet}>
   <div class="header-container">
     <img src={headerImage} class="img-fluid" alt="Header Image" />
     <div class="overlay"></div>
