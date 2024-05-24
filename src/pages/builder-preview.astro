@@ -1,0 +1,13 @@
+---
+import SiteLayout from "../layouts/default.astro";
+
+const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+---
+
+<SiteLayout>
+  <div class="container">
+    <builder-component model={builderModel} api-key={builderAPIpublicKey}></builder-component>
+    <script async src="https://cdn.builder.io/js/webcomponents"></script>
+  </div>
+</SiteLayout>

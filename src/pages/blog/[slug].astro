@@ -1,0 +1,114 @@
+---
+import CTAButtons from "../../components/CTAButtons.astro";
+import SiteLayout from "../../layouts/default.astro";
+
+export async function getStaticPaths() {
+  const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+  const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+  const response = await fetch(
+    `https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({
+      apiKey: builderAPIpublicKey,
+      fields: ["data.slug", "data.title", "data.category", "data.headerImage"].join(","),
+      cachebust: "true",
+    }).toString()}`
+  )
+    .then((res) => res.json())
+    .catch();
+
+  const posts: Post[] = response.results || [];
+
+  if (!Array.isArray(posts)) {
+    console.error("Expected posts to be an array, but got:", posts);
+    return [];
+  }
+
+  return posts.map(({ data: { slug, title, headerImage } }) => ({
+    params: { slug },
+    props: { title, headerImage },
+  }));
+}
+
+const { slug } = Astro.params;
+const { title, headerImage } = Astro.props;
+
+console.log("title", title);
+
+const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+
+// Builder's API requires this field but for this use case the url doesn't seem to matter - the API returns the same HTML
+const encodedUrl = encodeURIComponent("moot");
+const { html: postHTML } = await fetch(
+  `https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams({
+    apiKey: builderAPIpublicKey,
+    url: encodedUrl,
+    "query.data.slug": slug,
+    cachebust: "true",
+  }).toString()}`
+)
+  .then((res) => res.json())
+  .catch();
+---
+
+<style>
+  .header-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  .header-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  }
+
+  .overlay-text {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<SiteLayout>
+  <div class="header-container">
+    <img src={headerImage} class="img-fluid" alt="Header Image" />
+    <div class="overlay"></div>
+    <div class="overlay-text">
+      <h1 class="glow-black">{title}</h1>
+    </div>
+  </div>
+  <div class="container">
+    <article>
+      <Fragment set:html={postHTML} />
+    </article>
+  </div>
+
+  <section class="ts-banner">
+    <div class="container">
+      <div class="row py-5 text-center">
+        <div class="col">
+          <h1 class="py-5">
+            Get started <span class="glow">in minutes</span>
+          </h1>
+          <CTAButtons isDark="true" />
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

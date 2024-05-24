@@ -21,23 +21,17 @@ const currentPath = pathname.slice(1); // remove the first "/"
     </button>
 
     <div class="collapse navbar-collapse d-lg-flex" id="ts-navigation">
-      <a
-        class="navbar-brand col-lg-3 me-0 d-none d-lg-block"
-        href="https://www.threadscribe.ai/"
-      >
+      <a class="navbar-brand col-lg-3 me-0 d-none d-lg-block" href="https://www.threadscribe.ai/">
         <div class="d-flex">
           <img src={ThreadScribeHead.src} alt="Logo" />
-          <span class="p-2 pt-1 d-none d-md-block fw-bold">ThreadScribe.ai</span
-          >
+          <span class="p-2 pt-1 d-none d-md-block fw-bold">ThreadScribe.ai</span>
         </div>
       </a>
 
       <ul class="navbar-nav col-lg-6 justify-content-lg-center">
         <li class="nav-item">
-          <a
-            class={(currentPath === "" ? "active" : "") + " nav-link"}
-            aria-current="page"
-            href="/">Home</a
+          <a class={(currentPath === "" ? "active" : "") + " nav-link"} aria-current="page" href="/"
+            >Home</a
           >
         </li>
         <!-- <li class="nav-item dropdown">
@@ -64,20 +58,18 @@ const currentPath = pathname.slice(1); // remove the first "/"
           </ul>
         </li> -->
         <li class="nav-item">
-          <a
-            class={(currentPath === "pricing" ? "active" : "") + " nav-link"}
-            href="/pricing">Pricing</a
+          <a class={(currentPath === "pricing" ? "active" : "") + " nav-link"} href="/pricing"
+            >Pricing</a
           >
+        </li>
+        <li class="nav-item">
+          <a class={(currentPath === "blog" ? "active" : "") + " nav-link"} href="/blog">Blog</a>
         </li>
       </ul>
 
       <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-        <a href={config.threadScribe.appHome} class="btn btn-link me-2"
-          >Log In</a
-        >
-        <a href={config.threadScribe.installLink} class="btn btn-primary"
-          >Sign up for free</a
-        >
+        <a href={config.threadScribe.appHome} class="btn btn-link me-2">Log In</a>
+        <a href={config.threadScribe.installLink} class="btn btn-primary">Sign up for free</a>
       </div>
     </div>
 
