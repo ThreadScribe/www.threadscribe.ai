@@ -2,6 +2,8 @@
 import CTAButtons from "../../components/CTAButtons.astro";
 import SiteLayout from "../../layouts/BaseLayout.astro";
 
+import Author from "../../images/mathew_goldsborough_headshot.jpeg";
+
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
@@ -56,14 +58,7 @@ const { html: postHTML } = await fetch(
     width: 100%;
     height: 500px;
     overflow: hidden;
-  }
-  .header-container img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: auto;
-    transform: translate(-50%, -50%);
+    padding-top: 50px;
   }
 
   .overlay {
@@ -72,25 +67,54 @@ const { html: postHTML } = await fetch(
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  .overlay-text {
+  .text-center {
+    position: relative;
+    z-index: 1;
+  }
+
+  .author-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .author-name {
     color: white;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
   }
 </style>
 
 <SiteLayout title={title} description={snippet}>
-  <div class="header-container">
-    <img src={headerImage} class="img-fluid" alt="Header Image" />
-    <div class="overlay"></div>
-    <div class="overlay-text">
-      <h1 class="glow-black">{title}</h1>
+  <div class="header-container" style={{ backgroundImage: `url(${headerImage})` }}>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="overlay"></div>
+
+          <div class="text-center text-white">
+            <h1 class="glow-black my-5">{title}</h1>
+            <div class="author-container">
+              <img src={Author.src} class="author-image" alt="Mathew Goldsborough" />
+              <span class="author-name">by Mathew Goldsborough</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -98,7 +122,6 @@ const { html: postHTML } = await fetch(
       <Fragment set:html={postHTML} />
     </article>
   </div>
-
   <section class="ts-banner">
     <div class="container">
       <div class="row py-5 text-center">
