@@ -20,11 +20,8 @@ const { description, title, image }: Props = Astro.props;
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-
-
     <title>{title}</title>
     <meta content={description} name="description" />
-
 
     <meta property="og:title" content={title} />
     { image ? <meta property="og:image" content={image} /> : <></> }
@@ -33,6 +30,8 @@ const { description, title, image }: Props = Astro.props;
       content="threadscribe, slack, ai, consumer experience, consumer support, "
       name="keywords"
     />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Favicons -->
     <link href="/threadscribe_head_square_64.png" rel="icon" />

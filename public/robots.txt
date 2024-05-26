@@ -3,3 +3,5 @@ Disallow: /use-cases/
 Disallow: /thank-you
 Disallow: /thank-you-linkedin
 Disallow: /builder-preview
+
+Sitemap: https://www.threadscribe.ai/sitemap-index.xml
