@@ -58,6 +58,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
           </ul>
         </li> -->
         <li class="nav-item">
+          <a class={(currentPath === "pricing" ? "active" : "") + " nav-link"} target="_blank" href="https://docs.threadscribe.ai"
+            >Docs</a
+          >
+        </li>
+        <li class="nav-item">
           <a class={(currentPath === "pricing" ? "active" : "") + " nav-link"} href="/pricing"
             >Pricing</a
           >

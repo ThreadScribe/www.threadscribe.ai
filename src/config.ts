@@ -7,7 +7,7 @@ export const config = {
   },
   threadScribe: {
     slack:
-      "https://join.slack.com/t/threadscribeai/shared_invite/zt-2ebpbnvly-DPfMJREn2eL8iTgGYWVC6g",
+      "https://join.slack.com/t/threadscribe-users/shared_invite/zt-2jpyzxgvl-7_kFJQHyJSmJzWXmYK8cMg",
     appHome: "https://app.threadscribe.ai",
     installLink: "https://bot.threadscribe.ai/slack/install",
   },
