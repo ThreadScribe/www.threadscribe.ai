@@ -58,8 +58,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
           </ul>
         </li> -->
         <li class="nav-item">
-          <a class={(currentPath === "pricing" ? "active" : "") + " nav-link"} target="_blank" href="https://docs.threadscribe.ai"
-            >Docs</a
+          <a
+            class={(currentPath === "pricing" ? "active" : "") + " nav-link"}
+            target="_blank"
+            href="https://docs.threadscribe.ai">Docs</a
           >
         </li>
         <li class="nav-item">
@@ -74,7 +76,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
       <div class="d-lg-flex col-lg-3 justify-content-lg-end">
         <a href={config.threadScribe.appHome} class="btn btn-link me-2">Log In</a>
-        <a href={config.threadScribe.installLink} class="btn btn-primary">Sign up for free</a>
+        <a href={config.threadScribe.appHome} class="btn btn-primary">Sign up for free</a>
       </div>
     </div>
 
