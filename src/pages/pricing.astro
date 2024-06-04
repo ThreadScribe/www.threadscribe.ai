@@ -1,5 +1,6 @@
 ---
 import CTAButtons from "../components/CTAButtons.astro";
+import PricingFeature from "../components/PricingFeature.astro";
 import { config } from "../config";
 import SiteLayout from "../layouts/BaseLayout.astro";
 
@@ -27,16 +28,17 @@ const description =
   <section class="pricing py-5">
     <div class="container">
       <div class="row gy-5">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="plan-name">Free</h5>
-              <h6 class="plan-description">
+              <h5 class="plan-name"><i class="bi-emoji-smile"></i> Forever FREE</h5>
+              <!-- <h6 class="plan-description">
                 AI-chat companion for Slack. Instantly summarize lengthly threads and uncover
                 insights, fast!
-              </h6>
+              </h6> -->
               <div class="d-flex align-items-center">
                 <p class="price">$0</p>
+                <p class="price-details align-middle">Free as in beer</p>
               </div>
               <hr />
               <a class="btn btn-lg btn-outline-primary" href={config.threadScribe.appHome}
@@ -46,83 +48,85 @@ const description =
 
               <span class="plan-features-header">All accounts include:</span>
               <ul class="list-unstyled">
-                <li>
-                  <i class="bi bi-check"></i>
-                  Unlimited Thread Summaries
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Basic Search Functionality
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Web and Mobile Access to ThreadScribe.ai
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Integration with Slack
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Help Center & Email Support
-                </li>
+                <PricingFeature text="50 queries per month" />
+                <PricingFeature text="Single copilot " />
+
+                <PricingFeature text="Basic data sources (Slack and URLs)" />
+                <PricingFeature text="Slack automations" />
+                <PricingFeature text="Help center & Slack/Email support" />
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="plan-name">Business</h5>
-              <h6 class="plan-description">
-                Build your own private consumer experience data hub with real-time indexing and
-                search features.
-              </h6>
+              <h5 class="plan-name"><i class="bi-universal-access"></i> Essentials</h5>
+              <!-- <h6 class="plan-description">
+                AI-chat companion for Slack. Instantly summarize lengthly threads and uncover
+                insights, fast!
+              </h6> -->
               <div class="d-flex align-items-center">
-                <p class="price">$99</p>
-                <p class="price-details align-middle">
-                  / user / month billed yearly or $130 billed monthly
-                </p>
+                <p class="price">$29.99</p>
+                <p class="price-details align-middle">/ month</p>
               </div>
               <hr />
-              <a class="btn btn-primary btn-lg" href={config.threadScribe.appHome}>Start free</a>
+              <a class="btn btn-lg btn-primary" href="https://buy.stripe.com/00g6q7dKv7YX0es4gg"
+                >Get started</a
+              >
+              <hr />
+
+              <span class="plan-features-header">Everything in Free, plus:</span>
+              <ul class="list-unstyled">
+                <PricingFeature text="200 queries per month" />
+                <PricingFeature text="5 data sources" />
+                <PricingFeature text="PDF & Notion integration" />
+                <PricingFeature text="Premium Support & Dedicated Onboarding" />
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUSINESS PLAN -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="plan-name"><i class="bi-building"></i> Business</h5>
+              <!-- <h6 class="plan-description">
+                Build your own private consumer experience data hub with real-time indexing and
+                search features.
+              </h6> -->
+              <div class="d-flex align-items-center">
+                <p class="price">$99.99</p>
+                <p class="price-details align-middle">/ month</p>
+              </div>
+              <hr />
+              <a
+                class="btn btn-outline-primary btn-lg"
+                href="https://buy.stripe.com/5kAg0H8qba75d1e9AB">Get started</a
+              >
               <hr />
               <div class="plan-features-header">Everything in Free, plus:</div>
               <ul class="list-unstyled">
-                <li>
-                  <i class="bi bi-check"></i>
-                  Automated Channel Digests
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Scheduled channel summaries
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Intelligent Keyword Notifications
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Sophisticated Access Controls
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Premium Support & Dedicated Onboarding
-                </li>
+                <PricingFeature text="1000 queries per month" />
+                <PricingFeature text="Unlimited copilots" />
+                <PricingFeature text="Custom AI model implementation" />
+                <PricingFeature text="Automated channel digests" />
+                <!-- <PricingFeature text="Scheduled channel summaries" /> -->
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="plan-name">Enterprise</h5>
-              <h6 class="plan-description">
+              <h5 class="plan-name"><i class="bi-buildings"></i> Enterprise</h5>
+              <!-- <h6 class="plan-description">
                 For organizations that want to leverage the power of AI at scale but need additional
                 security, control, and support.
-              </h6>
+              </h6> -->
               <div class="d-flex align-items-center">
                 <p class="price">
                   <i class="bi bi-chat-dots-fill"></i>
@@ -134,22 +138,12 @@ const description =
               <hr />
               <div class="plan-features-header">Everything in Business, plus:</div>
               <ul class="list-unstyled">
-                <li>
-                  <i class="bi bi-check"></i>
-                  Real-time Channel & Thread Indexing
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Dedicated Hosting
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Service & Uptime Commitment
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  Slack Enterprise Support & Integration
-                </li>
+                <PricingFeature text="Custom queries per month" />
+                <!-- <PricingFeature text="Custom data sources" /> -->
+                <PricingFeature text="Custom integration & webhooks" />
+                <PricingFeature text="Real-time channel indexing" />
+                <PricingFeature text="SLA and uptime commitment" />
+                <!-- <PricingFeature text="Slack enterprise support" /> -->
               </ul>
             </div>
           </div>
