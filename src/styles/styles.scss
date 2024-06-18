@@ -9,9 +9,31 @@
 
 $light-shades: #EEF0EC;
 $light-accent: #679BBD;
-$primary: rgb(13, 109, 253);
+$primary: #0d6dfd;
 $dark-accent: #4A5985;
 $dark-shades: #161925;
+
+$accent1: #ffc759;
+
+
+$dark-blue: #193895;
+
+.dark-blue {
+  background-color: $dark-blue;
+}
+
+$ts-gray: rgb(245, 246, 247);
+
+.woot {
+  background-color: $ts-gray
+}
+
+// :root {
+//   // --bs-body-font-size: 1rem;  /* Overwrite this variable */
+//   // $font-size-base: 5rem;
+//   // --bs-font-size-base: 3rem
+// }
+
 
 /// Slightly lighten a color
 /// @access public
@@ -35,9 +57,9 @@ body {
   justify-content: space-between;
 }
 
-nav {
-  border: 1px #eeedec;
-}
+// nav {
+//   border: 1px #eeedec;
+// }
 
 .nav-item {
   padding-left: 5px;
@@ -45,18 +67,19 @@ nav {
 }
 
 .ts-hero {
-  padding-top: 4rem;
+  // padding-top: 4rem;
+  // padding-bottom: 4rem;
 
-  padding-bottom: 4rem;
+  // @include media-breakpoint-up(lg) {
+  //   padding-top: 5rem;
+  // }
 
-  @include media-breakpoint-up(lg) {
-    padding-top: 5rem;
+  h1 {
+    font-size: calc(2rem + 1.5vw)
   }
 
-  // h1 {}
-
   h2 {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     font-weight: 300;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -80,37 +103,104 @@ nav {
   padding: 1rem 0;
 }
 
+.ts-benefits {
+  min-height: 530px;
+}
+
 .ts-faq {
-
-  h4,
-  p {
-    font-size: 1.125rem;
+  .accordion-button {
+    font-weight: bold ;
   }
 }
 
-h1 {
+/* Blockquote main style */
+.blockquote {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  padding: 30px 0;
+  width: 100%;
+  z-index: 1;
+  margin: 80px auto;
+  align-self: center;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+/* Blockquote header */
+.blockquote h3 {
+  position: relative;
+  color: #fff;
   font-size: 3rem;
-
-  @include media-breakpoint-up(lg) {
-    font-size: 4rem;
-  }
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
 }
 
-h2 {
-  font-size: 2rem;
-
-  @include media-breakpoint-up(lg) {
-    font-size: 3rem;
-  }
+/* Blockquote right double quotes */
+.blockquote:after {
+  position: absolute;
+  content: "”";
+  color: #fff;
+  font-size: 10rem;
+  line-height: 0;
+  bottom: -43px;
+  right: 30px;
 }
 
-h3 {
-  font-size: 2rem;
+/* increase header size after 600px */
+@media all and (min-width: 600px) {
+  .blockquote h3 {
+      font-size: 60px;
+ }
 
-  @include media-breakpoint-up(lg) {
-    font-size: 2.5rem;
-  }
 }
+
+/* Blockquote subheader */
+.blockquote h4 {
+  position: relative;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+
+// .ts-faq {
+
+//   // h4,
+//   // p {
+//   //   // font-size: 1.125rem;
+//   // }
+// }
+
+// h1 {
+//   font-size: 3rem;
+
+//   @include media-breakpoint-up(lg) {
+//     font-size: 4rem;
+//   }
+// }
+
+// h2 {
+//   font-size: 2rem;
+
+//   @include media-breakpoint-up(lg) {
+//     font-size: 3rem;
+//   }
+// }
+
+// h3 {
+//   font-size: 2rem;
+
+//   @include media-breakpoint-up(lg) {
+//     font-size: 2.5rem;
+//   }
+// }
 
 // p {
 //   // font-size: 1.5rem;
@@ -128,6 +218,10 @@ h3 {
 .caption {
   color: gray;
   font-size: .8rem;
+}
+
+.ts-dark {
+  background-color: $dark-shades; 
 }
 
 
@@ -157,15 +251,16 @@ h3 {
   width: 35px;
 }
 
-.navbar .navbar-brand .brand-logo {
-  align-items: center;
-  display: flex;
-}
+// .navbar .navbar-brand .brand-logo {
+//   align-items: center;
+//   display: flex;
+// }
 
 .icon-wrapper {
   width: 3rem;
   height: 3rem;
   color: $primary;
+  margin: 0 auto;
 }
 
 .use-case-feature {

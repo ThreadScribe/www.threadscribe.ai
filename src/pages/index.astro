@@ -13,30 +13,39 @@ import GoogleDrive from "../logos/googledrive.svg";
 import NotionLogo from "../logos/notion.svg";
 import SlackLogo from "../logos/slack.svg";
 
-const title = "The Best AI Chat Companion for CX Teams | ThreadScribe.ai";
+const title = "Boost productivity and customer satisfaction with ThreadScribe.ai";
 const description =
-  "ThreadScribe.ai is a powereful AI-powered chatbot for Slack designed to transform your Slack conversations into a structured, easily searchable knowledge base.";
+  "Transform Slack into a powerful, searchable knowledge base, utilizing advanced AI to break down information silos and streamline support operations.";
 ---
 
 <SiteLayout title={title} description={description}>
   <!-- hero unit -->
-  <section class="ts-hero">
+  <section class="ts-hero my-5">
     <div class="container">
       <div class="d-flex justify-content-center text-center">
-        <div class="col-12 col-lg-8">
+        <div class="col-12">
           <h1>
+            Boost <span class="glow">productivity</span> and <span class="glow"
+              >customer satisfaction</span
+            >
+          </h1>
+          <!-- <h1>
             The Ultimate<br />
             <span class="glow">AI Chat Companion</span><br />
             for CX teams
-          </h1>
+          </h1> -->
           <!-- <h1>
             The Ultimate Chat Companion for <span class="glow"
               >Enhancing Agent Productivity</span
             >
           </h1> -->
-          <h2>
+          <!-- <h2>
             Transform fragmented information into a seamlessly structured, searchable knowledge
             base.
+          </h2> -->
+          <h2>
+            ThreadScribe transforms your Slack workspace into a searchable knowledge base, using AI
+            to break down information silos and streamline support operations.
           </h2>
           <CTAButtons />
         </div>
@@ -45,9 +54,9 @@ const description =
   </section>
 
   <!-- video -->
-  <section class="container py-5">
-    <div class="row">
-      <div class="col">
+  <section class="container my-2">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
         <div class="ratio ratio-16x9">
           <iframe
             src="https://www.youtube.com/embed/5SW5wozdY2s?si=fHNHHJfr-vSO2txt"
@@ -59,148 +68,16 @@ const description =
     </div>
   </section>
 
-  <section class="container py-5 icon-list">
-    <div class="row text-center">
-      <div class="col">
-        <h2 class="pb-5">
-          Your favorite tools. <span class="glow">Way more value.</span>
-        </h2>
-      </div>
-    </div>
-    <div class="row pb-3 text-center">
-      <div class="col">
-        <img src={SlackLogo.src} />
-      </div>
-      <div class="col">
-        <img src={NotionLogo.src} />
-      </div>
-      <div class="col">
-        <img src={GoogleDrive.src} />
-      </div>
-      <div class="col">
-        <img src={Confluence.src} />
-      </div>
-      <div class="col">
-        <img src={Freshdesk.src} />
-      </div>
-    </div>
-  </section>
-
-  <!-- <section class="container py-5">
-    <div class="container py-5">
-      <div class="d-flex justify-content-center text-center">
-        <div class="col-12 col-lg-10">
-          <h2>
-            Transform Your Slack into a <br /><span class="glow"
-              >Powerful Customer Support Hub</span
-            >
-
-            !-- Empowering companies to <br /><span class="glow"
-              >stand out with customer experience</span
-            > --
-          </h2>
-          <p class="py-3">
-            Watch your customer satisfaction soar as agents achieve new heights
-            of efficiency.
-          </p>
-          <button class="btn btn-outline-dark btn-lg"
-            >Explore ThreadScribe ></button
-          >
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="py-5 mb-5 container">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-lg-6">
-          <div class="eyebrow">instant thread summarization</div>
-          <h3 class="text-primary">
-            Boost Your Agents' Productivity with Seamless Slack Solutions
-          </h3>
-          <p class="py-3 fs-5">
-            Intelligently summarize your conversations and make them serchable right from Slack.
-          </p>
-
-          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
-        </div>
-        <div class="col-12 col-lg-6">
-          <img
-            src={SummaryExample.src}
-            class="img-fluid rounded shadow-lg"
-            alt="Instantly summarize your lengthly slack threads with ThreadScribe.ai"
-            width="100%"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container py-5">
-    <div class="">
-      <div class="row flex-md-row-reverse align-items-center">
-        <div class="col-12 col-lg-6">
-          <div class="eyebrow">Clarity at Your Fingertips</div>
-          <h3 class="text-primary">Find What Matters, Instantly</h3>
-          <p class="py-3 fs-5">
-            ThreadScribe.ai simplifies your workflow, quickly surfacing key insights so you can
-            resolve issues faster. Less clutter, more clarity — empower your team to provide
-            standout service effortlessly.
-          </p>
-
-          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
-        </div>
-        <div class="col-12 col-lg-6">
-          <img
-            src={SearchExample.src}
-            class="img-fluid rounded shadow-lg"
-            alt="Find what matters, instantly, with ThreadScribe.ai"
-            width="100%"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ts-bg-primary-10 py-5">
-    <div class="container">
-      <div class="d-flex justify-content-center text-center">
-        <div class="col-12 col-lg-10">
-          <h2>
-            Transform Your Slack into a <br /><span class="glow">Powerful Customer Support Hub</span
-            >
-
-            <!-- !-- Empowering companies to <br /><span class="glow"
-              >stand out with customer experience</span
-            > -- -->
-          </h2>
-          <p class="py-3">
-            Watch your customer satisfaction soar as agents achieve new heights of efficiency.
-          </p>
-          <a class="btn btn-primary" href={config.threadScribe.appHome}>
-            <i class="bi bi-emoji-laughing-fill btn-lg"></i> Get started
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="py-5">
-    <div class="container">
+    <div class="container text-center">
       <div class="row pb-5">
         <div class="col">
           <div class="eyebrow">why threadscribe</div>
-          <h3>
-            Power Your Agents to<br />
-            <span class="glow">Wow and Win</span>
-          </h3>
+          <h2>Streamline operations and delight customers</h2>
         </div>
       </div>
 
-      <div class="row row-cols-2 row-cols-lg-4">
+      <div class="row pb-5 row-cols-2 row-cols-lg-4">
         <div class="col">
           <div class="icon-wrapper">
             <svg
@@ -285,46 +162,300 @@ const description =
           </p>
         </div>
       </div>
+
+      <div class="row py-5 icon-list text-center">
+        <div class="col-12 pb-5">
+          <h2>Source information from your existing tech stack directly into Slack</h2>
+        </div>
+        <div class="col">
+          <img src={SlackLogo.src} />
+        </div>
+        <div class="col">
+          <img src={NotionLogo.src} />
+        </div>
+        <div class="col">
+          <img src={GoogleDrive.src} />
+        </div>
+        <div class="col">
+          <img src={Confluence.src} />
+        </div>
+        <div class="col">
+          <img src={Freshdesk.src} />
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-5 py-5 justify-content-center">
+      <div class="col-2 text-center">
+        <h3 class="fw-light">Schedule a Demo</h3>
+        <div class="d-grid gap-2">
+          <a class="btn btn-primary btn-lg" href={config.threadScribe.appHome}>
+            <i class="bi bi-clock"></i> Find a Time
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- benefits carousel -->
+  <section class="ts-benefits dark-blue">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- <h2 class="text-center">Why do I need ThreadScribe?</h2> -->
+        <div class="col-12 col-md-10">
+          <div id="threadScribeBenefits" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="blockquote">
+                  <h3>
+                    2x the Revenue: Customer-first B2C businesses see nearly double the revenue
+                    growth of noncustomer-first businesses.
+                  </h3>
+                  <h4>
+                    &mdash;Forrester<br />
+                    <em>
+                      <a
+                        class="text-white"
+                        href="https://www.forrester.com/report/the-state-of-customer-obsession-2022/RES178015"
+                        >The State of Customer Obsession
+                      </a>
+                    </em>
+                  </h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="blockquote">
+                  <h3>
+                    75% more buying potential: 3 in 4 consumers will spend more with businesses that
+                    provide a good CX.
+                  </h3>
+                  <h4>
+                    &mdash;Zendesk<br />
+                    <em>
+                      <a class="text-white" href="https://cxtrends.zendesk.com/">CX Trends 2024</a>
+                    </em>
+                  </h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="blockquote">
+                  <h3>80% of organizations expect to compete based on CX.</h3>
+                  <h4>
+                    &mdash;Gartner<br />
+                    <em>
+                      <a
+                        class="text-white"
+                        href="https://www.gartner.com/en/doc/3874972-realizing-the-benefits-of-superior-customer-experience-a-gartner-trend-insight-report"
+                      >
+                        Realizing the Benefits of Superior Customer Experience
+                      </a>
+                    </em>
+                  </h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="blockquote">
+                  <h3>
+                    Just a 5% improvement in customer retention could increase profitability by 25%.
+                  </h3>
+                  <h4>
+                    &mdash;Forrester<br />
+                    <em>
+                      <a
+                        class="text-white"
+                        href="https://www.forrester.com/blogs/customer-led-growth-is-getting-more-attention-among-b2b-firms-should-you-care/"
+                        >Customer-Led Growth Is Getting More Attention Among B2B Firms</a
+                      >
+                    </em>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#threadScribeBenefits"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#threadScribeBenefits"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 mb-5 container">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="eyebrow">instant thread summarization</div>
+          <h3 class="text-primary">
+            Boost Your Agents' Productivity with Seamless Slack Solutions
+          </h3>
+          <p class="py-3 fs-5">
+            Intelligently summarize your conversations and make them serchable right from Slack.
+          </p>
+
+          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
+        </div>
+        <div class="col-12 col-lg-6">
+          <img
+            src={SummaryExample.src}
+            class="img-fluid rounded shadow-lg"
+            alt="Instantly summarize your lengthly slack threads with ThreadScribe.ai"
+            width="100%"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="container py-5">
-    <hr />
+    <div class="">
+      <div class="row flex-md-row-reverse align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="eyebrow">Clarity at Your Fingertips</div>
+          <h3 class="text-primary">Find What Matters, Instantly</h3>
+          <p class="py-3 fs-5">
+            ThreadScribe.ai simplifies your workflow, quickly surfacing key insights so you can
+            resolve issues faster. Less clutter, more clarity — empower your team to provide
+            standout service effortlessly.
+          </p>
+
+          <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
+        </div>
+        <div class="col-12 col-lg-6">
+          <img
+            src={SearchExample.src}
+            class="img-fluid rounded shadow-lg"
+            alt="Find what matters, instantly, with ThreadScribe.ai"
+            width="100%"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section class="ts-bg-primary-10 py-5">
+    <div class="container">
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <h2>
+            Experience the future of <span class="glow">customer support</span>
+          </h2>
+          <p class="py-3">
+            Boost productivity, streamline operations, and delight customers with ThreadScribe. Get
+            started today and transform your Slack into a powerful customer support hub.
+          </p>
+          <a class="btn btn-primary btn-lg" href={config.threadScribe.appHome}>
+            <i class="bi bi-stars"></i> Get started
+          </a>
+          <a class="btn btn-outline-primary btn-lg" href={config.threadScribe.appHome}>
+            Schedule a Demo
+          </a><br />
+          <a class="btn btn-link btn-lg" href={config.threadScribe.appHome}> Contact Us </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="container py-5">
+    <hr />
+  </section> -->
 
   <!-- FAQs -->
-  <section class="container py-5">
+  <section class="container py-5 ts-faq">
     <div class="row pb-5">
       <div class="col">
-        <div class="eyebrow">Frequently Asked questions</div>
-        <h2 class="py-2">Everything you need to know</h2>
-        <p>
-          Your question not answered here? <a href="mailto:hello@threadscribe.ai">Email us</a>.
-        </p>
+        <!-- <div class="eyebrow">Frequently Asked questions</div> -->
+        <h2 class="text-center">Frequently Asked Questions</h2>
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-lg-3 g-4 ts-faq">
-      <div class="col">
-        <h4>What is ThreadScribe?</h4>
-        <p>
-          ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to transform your Slack
-          conversations into a structured, easily searchable knowledge base.
-        </p>
+    <div class="row">
+      <div class="col-12">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+                aria-expanded="false"
+                aria-controls="faq1"
+              >
+                What is ThreadScribe?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                ThreadScribe.ai is a chatbot for Slack that uses cutting-edge AI to transform your
+                Slack conversations into a structured, easily searchable knowledge base.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+                aria-expanded="false"
+                aria-controls="faq2"
+              >
+                How much does ThreadScribe cost?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Threadscribe is available for free for small workspaces and workloads. Subscription
+                plans are available for larger organizations who are serious about providing
+                exceptional customer service. Pricing is available on our pricing page.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3"
+                aria-expanded="false"
+                aria-controls="faq3"
+              >
+                How can I get started with ThreadScribe?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                To get started with ThreadScribe, simply install the app on your Slack workspace and
+                begin summarizing some of your conversations.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="row">
       <div class="col">
-        <h4>How much does ThreadScribe cost?</h4>
-        <p>
-          Threadscribe is available for free for small workspaces and workloads. Subscription plans
-          are available for larger organizations who are serious about providing exceptional
-          customer service. Pricing is available on our pricing page.
-        </p>
-      </div>
-      <div class="col">
-        <h4>How can I get started with ThreadScribe?</h4>
-        <p>
-          To get started with ThreadScribe, simply install the app on your Slack workspace and begin
-          summarizing some of your conversations.
+        <p class="my-4">
+          Your question not answered here? <a href="mailto:hello@threadscribe.ai">Email us</a>.
         </p>
       </div>
     </div>
