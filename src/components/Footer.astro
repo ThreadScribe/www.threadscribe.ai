@@ -57,17 +57,20 @@ import { config } from "../config";
 
       <div class="col-12 col-md-5 mb-3">
         <p class="fs-5 fw-bold">Submit your email to get started today!</p>
-        <form>
+        <form
+          method="POST"
+          action="https://customerioforms.com/forms/submit_action?site_id=57f6e7b74f00a9266d90&form_id=74f3807be3cc4a8&success_url=https://www.threadscribe.ai/thank-you/"
+        >
           <div class="mb-3">
             <input
               type="email"
               name="email"
               class="form-control"
-              id="emailInput"
-              aria-describedby="emailHelp"
+              id="email_input"
+              aria-describedby="email_help"
               placeholder="Email Address"
             />
-            <div id="emailHelp" class="form-text">
+            <div id="email_help" class="form-text">
               We'll never share your email with anyone else.
             </div>
           </div>
